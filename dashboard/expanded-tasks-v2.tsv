@@ -1,0 +1,72 @@
+ID	Phase	Task Name	Owner	Status	Priority	Start Date	Due Date	Completed	Days Left	Blocker	Notes	Dependencies
+88	Phase 0: Reboot	Register domain (drinkpoptop.com or getpoptop.com)	Alex Munn	Not Started	High	2/6/2026	2/10/2026			Verify availability on Namecheap first
+89	Phase 2: Brand	Set up free landing page (Carrd or Mailchimp)	Paul Giarrizzo	Not Started	High	2/10/2026	2/17/2026			Coming soon page, email capture	88
+90	Phase 2: Brand	Write landing page copy (headline, value prop, CTA)	Paul Giarrizzo	Not Started	High	2/10/2026	2/14/2026			Keep simple: what it is, why it matters, join waitlist
+91	Phase 2: Brand	Create placeholder logo/wordmark for landing page	Paul Giarrizzo	Not Started	Medium	2/10/2026	2/17/2026			Temporary until final logo
+92	Phase 2: Brand	Set up Mailchimp account for email list	Paul Giarrizzo	Not Started	High	2/10/2026	2/14/2026			Free tier sufficient initially
+93	Phase 2: Brand	Create welcome email sequence (3 emails)	Paul Giarrizzo	Not Started	Medium	2/17/2026	2/28/2026			Welcome, brand story, stay tuned	92
+94	Phase 2: Brand	Launch landing page live	Paul Giarrizzo	Not Started	High	2/17/2026	2/21/2026			Goal: live before end of Feb	89,90,91,92
+95	Phase 2: Brand	Set up Google Analytics on landing page	Paul Giarrizzo	Not Started	Medium	2/21/2026	2/24/2026			Track traffic, conversions	94
+96	Phase 2: Brand	Share landing page URL with network for initial signups	Paul Giarrizzo	Not Started	Medium	2/24/2026	2/28/2026			Friends, family, early advocates	94
+97	Phase 2: Brand	Entity formation decision (LLC vs S-Corp)	Paul Giarrizzo	Not Started	High	2/13/2026	2/20/2026			Discuss with Alex, may need accountant input
+98	Phase 2: Brand	File LLC formation (Indiana or Delaware)	Paul Giarrizzo	Not Started	High	2/20/2026	2/27/2026			Use LegalZoom or attorney	97
+99	Phase 2: Brand	Obtain EIN from IRS	Paul Giarrizzo	Not Started	High	2/27/2026	3/3/2026			Free, online application	98
+100	Phase 2: Brand	Open business bank account	Paul Giarrizzo	Not Started	High	3/3/2026	3/10/2026			Need EIN and LLC docs	99
+101	Phase 2: Brand	Set up QuickBooks Online account	Paul Giarrizzo	Not Started	Medium	3/10/2026	3/17/2026			Simple Start plan sufficient initially	100
+102	Phase 2: Brand	Create chart of accounts in QBO	Paul Giarrizzo	Not Started	Medium	3/17/2026	3/24/2026			Revenue, COGS, expenses, assets	101
+103	Phase 2: Brand	Set up invoicing templates in QBO	Paul Giarrizzo	Not Started	Low	3/24/2026	3/31/2026			For distributor/wholesale orders	101
+104	Phase 2: Brand	Research sales tax requirements (nexus states)	Paul Giarrizzo	Not Started	Medium	3/17/2026	3/31/2026			Indiana + states where you sell
+105	Phase 2: Brand	Set up sales tax collection (TaxJar or Shopify native)	Paul Giarrizzo	Not Started	Medium	6/26/2026	7/10/2026			Integrate with Shopify	104
+106	Phase 2: Brand	Obtain business insurance quote (product liability)	Paul Giarrizzo	Not Started	Medium	3/10/2026	3/24/2026			Required for CLC, distributors	98
+107	Phase 2: Brand	Purchase business insurance policy	Paul Giarrizzo	Not Started	Medium	3/24/2026	4/7/2026			Product liability + general	106
+108	Phase 5: GTM	Create Shopify account	Paul Giarrizzo	Not Started	High	6/19/2026	6/22/2026			Basic plan $29/mo
+109	Phase 5: GTM	Purchase and connect custom domain to Shopify	Paul Giarrizzo	Not Started	High	6/22/2026	6/24/2026			drinkpoptop.com or getpoptop.com	88,108
+110	Phase 5: GTM	Select and customize Shopify theme	Paul Giarrizzo	Not Started	High	6/22/2026	6/30/2026			Free theme fine initially; clean, premium look	108
+111	Phase 5: GTM	Set up Stripe payment processing	Paul Giarrizzo	Not Started	High	6/24/2026	6/28/2026			Connect to Shopify	108
+112	Phase 5: GTM	Configure shipping rates and zones	Paul Giarrizzo	Not Started	High	6/28/2026	7/3/2026			USPS, UPS rates; free shipping threshold?	108
+113	Phase 5: GTM	Create product listings (each SKU)	Paul Giarrizzo	Not Started	High	7/17/2026	7/24/2026			Need final product photos	108
+114	Phase 5: GTM	Write product descriptions and specs	Paul Giarrizzo	Not Started	High	7/17/2026	7/24/2026			Features, dimensions, materials, care
+115	Phase 5: GTM	Arrange product photography shoot	Paul Giarrizzo	Not Started	High	7/10/2026	7/17/2026			Lifestyle + product shots
+116	Phase 5: GTM	Edit and optimize product photos	Paul Giarrizzo	Not Started	Medium	7/17/2026	7/21/2026			White background + in-use shots	115
+117	Phase 5: GTM	Set up abandoned cart email sequence	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/31/2026			Klaviyo or Shopify native	108
+118	Phase 5: GTM	Set up post-purchase email sequence	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/31/2026			Thank you, shipping update, review request	108
+119	Phase 5: GTM	Create FAQ page	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/31/2026			Shipping, returns, product care, sizing
+120	Phase 5: GTM	Create About Us page	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/31/2026			Brand story, team, mission
+121	Phase 5: GTM	Create Contact page with support email	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/28/2026			support@drinkpoptop.com or similar
+122	Phase 5: GTM	Set up returns/refund policy page	Paul Giarrizzo	Not Started	High	7/24/2026	7/28/2026			Clear policy required
+123	Phase 5: GTM	Install Google Analytics 4 on Shopify	Paul Giarrizzo	Not Started	High	7/28/2026	7/31/2026			E-commerce tracking enabled	108
+124	Phase 5: GTM	Install Facebook/Meta Pixel	Paul Giarrizzo	Not Started	Medium	7/28/2026	7/31/2026			For retargeting ads later	108
+125	Phase 5: GTM	Test full checkout flow (place test order)	Paul Giarrizzo	Not Started	High	7/31/2026	8/3/2026			End-to-end test before launch	108,111,112,113
+126	Phase 5: GTM	Connect Shopify to 3PL for fulfillment	Paul Giarrizzo	Not Started	High	8/7/2026	8/14/2026			ShipBob, Deliverr, or similar	108
+127	Phase 5: GTM	Migrate email list from Mailchimp to Klaviyo (if switching)	Paul Giarrizzo	Not Started	Low	7/24/2026	7/31/2026			Optional; Klaviyo better for e-commerce	92
+128	Phase 5: GTM	Create social media content calendar (Aug-Nov)	Paul Giarrizzo	Not Started	High	7/24/2026	8/7/2026			Weekly posting schedule
+129	Phase 5: GTM	Develop brand voice/tone guidelines	Paul Giarrizzo	Not Started	Medium	7/10/2026	7/17/2026			Fun, premium, tailgate culture
+130	Phase 5: GTM	Create 20 social media posts (bank content)	Paul Giarrizzo	Not Started	High	8/7/2026	8/21/2026			Mix of product, lifestyle, football culture	128
+131	Phase 5: GTM	Identify 50 tailgate/college football influencers	Paul Giarrizzo	Not Started	Medium	7/17/2026	7/31/2026			Instagram, TikTok focus
+132	Phase 5: GTM	Draft influencer outreach template	Paul Giarrizzo	Not Started	Medium	7/31/2026	8/7/2026			Product seeding, affiliate, paid options	131
+133	Phase 5: GTM	Send influencer outreach (first 20)	Paul Giarrizzo	Not Started	Medium	8/7/2026	8/14/2026			Start with micro-influencers	132
+134	Phase 5: GTM	Create PR/media list (sports, lifestyle, local)	Paul Giarrizzo	Not Started	Medium	7/31/2026	8/7/2026			Local news, sports blogs, tailgate sites
+135	Phase 5: GTM	Write press release for launch	Paul Giarrizzo	Not Started	Medium	8/14/2026	8/21/2026			Embargo until Sep 1	134
+136	Phase 5: GTM	Send press release to media list	Paul Giarrizzo	Not Started	Medium	8/28/2026	9/1/2026			Coordinate with launch	135
+137	Phase 5: GTM	Set up launch day email blast	Paul Giarrizzo	Not Started	High	8/21/2026	8/28/2026			To full waitlist
+138	Phase 5: GTM	Plan launch week social media blitz	Paul Giarrizzo	Not Started	High	8/21/2026	8/28/2026			Daily posts, stories, engagement	130
+139	Phase 5: GTM	Set up referral/affiliate program (optional)	Paul Giarrizzo	Not Started	Low	8/14/2026	8/28/2026			Shopify app like Refersion	108
+140	Phase 5: GTM	Research paid ad strategy (Meta, Google)	Paul Giarrizzo	Not Started	Medium	8/7/2026	8/21/2026			Budget, targeting, creative needs
+141	Phase 5: GTM	Create first paid ad campaign (Meta)	Paul Giarrizzo	Not Started	Medium	8/28/2026	9/7/2026			Retargeting waitlist + lookalikes	124,140
+142	Phase 5: GTM	Research distributor landscape (beverage, tailgate, sporting goods)	Paul Giarrizzo	Not Started	Medium	6/19/2026	7/3/2026			Who distributes to target retailers
+143	Phase 5: GTM	Identify 10-15 potential distributors	Paul Giarrizzo	Not Started	Medium	7/3/2026	7/17/2026			Regional + national options	142
+144	Phase 5: GTM	Create distributor sell sheet / line sheet	Paul Giarrizzo	Not Started	Medium	7/17/2026	7/31/2026			Wholesale pricing, MOQs, terms
+145	Phase 5: GTM	Draft distributor outreach email	Paul Giarrizzo	Not Started	Medium	7/31/2026	8/7/2026			Intro, product, opportunity	144
+146	Phase 5: GTM	Send distributor outreach (first 5)	Paul Giarrizzo	Not Started	Medium	8/7/2026	8/14/2026			Start with regional	145
+147	Phase 5: GTM	Set up wholesale pricing tier in Shopify	Paul Giarrizzo	Not Started	Low	8/14/2026	8/21/2026			Or use separate wholesale portal	108
+148	Phase 5: GTM	Create distributor/wholesale terms document	Paul Giarrizzo	Not Started	Medium	7/31/2026	8/14/2026			Net terms, minimums, returns
+149	Phase 6: Launch	Respond to distributor inquiries	Paul Giarrizzo	Not Started	Medium	9/1/2026	11/30/2026			Ongoing post-launch
+150	Phase 6: Launch	Negotiate first distributor agreement	Paul Giarrizzo	Not Started	Medium	9/15/2026	10/15/2026			If interest received	149
+151	Phase 6: Launch	Monthly P&L review in QBO	Paul Giarrizzo	Not Started	Medium	10/1/2026	11/30/2026			Ongoing monthly	101
+152	Phase 6: Launch	Quarterly inventory reconciliation	Paul Giarrizzo	Not Started	Medium	10/1/2026	11/30/2026			QBO + 3PL sync	101
+153	Phase 6: Launch	File quarterly sales tax returns	Paul Giarrizzo	Not Started	High	10/1/2026	10/15/2026			Varies by state	105
+154	Phase 2: Brand	Research business license requirements (Indiana)	Paul Giarrizzo	Not Started	Medium	2/27/2026	3/10/2026			State + local	98
+155	Phase 2: Brand	Obtain required business licenses	Paul Giarrizzo	Not Started	Medium	3/10/2026	3/24/2026			If needed	154
+156	Phase 2: Brand	Set up Google Workspace (drinkpoptop.com email)	Paul Giarrizzo	Not Started	Medium	2/14/2026	2/21/2026			paul@drinkpoptop.com, info@, support@	88
+157	Phase 5: GTM	Create customer service response templates	Paul Giarrizzo	Not Started	Medium	8/21/2026	8/28/2026			Common questions, order issues, returns
+158	Phase 5: GTM	Set up Gorgias or Zendesk for customer service (optional)	Paul Giarrizzo	Not Started	Low	8/21/2026	8/28/2026			May not need until volume grows

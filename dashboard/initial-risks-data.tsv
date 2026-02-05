@@ -1,0 +1,9 @@
+ID	Risk	Probability	Impact	Score	Mitigation	Owner	Status
+1	Team disengagement / loss of momentum (again)	Medium	High	6	Weekly standing calls, dashboard visibility, clear ownership, daily digest emails	Paul Giarrizzo	Active
+2	CLC licensing approval delays	Medium	High	6	Apply early (May), monthly follow-up, have backup school contacts	Paul Giarrizzo	Active
+3	Tooling delays from manufacturer	Medium	High	6	Start early, build 4-week buffer, evaluate multiple suppliers	Ross Munn	Active
+4	Manufacturing quality issues	Low	High	3	T1 validation process, QC checks, backup supplier identified	Brian Williams	Active
+5	Capital constraints / funding gaps	Medium	Medium	4	Phased spending approach, pre-orders to fund later phases	Alex Munn	Active
+6	Design iteration overruns past freeze date	Medium	Medium	4	Hard design freeze date, rapid 3D prototyping capability	Brian Williams	Active
+7	Trademark conflict with existing mark	Low	Medium	2	Early USPTO search, attorney review, backup names ready	Paul Giarrizzo	Active
+8	Brian availability / capacity constraints	Medium	High	6	Early commitment confirmation, clear milestone dates, regular check-ins	Paul Giarrizzo	Active

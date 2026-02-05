@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.eggs/
+*.egg
+venv/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secrets (never commit)
+.env
+*.env
+credentials.json
+secrets.json
+
+# Logs
+*.log
+
+# Temp files
+*.tmp
+*.temp
+~$*

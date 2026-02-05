@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopTop Business Plan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        :root {
+            --primary: #1a365d;
+            --secondary: #c9a227;
+            --accent: #2d3748;
+            --light: #f7fafc;
+            --text: #2d3748;
+            --text-light: #718096;
+        }
+
+        @page {
+            size: letter;
+            margin: 0.75in;
+            @bottom-center {
+                content: counter(page);
+                font-family: 'Inter', sans-serif;
+                font-size: 10px;
+                color: #718096;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* Cover Page */
+        .cover {
+            page-break-after: always;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: white;
+            margin: -0.75in;
+            padding: 2in;
+        }
+
+        .cover-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 72pt;
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 0.5em;
+            color: white;
+        }
+
+        .cover-logo span {
+            color: var(--secondary);
+        }
+
+        .cover-subtitle {
+            font-size: 14pt;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 3em;
+            opacity: 0.9;
+        }
+
+        .cover-tagline {
+            font-size: 18pt;
+            font-style: italic;
+            font-weight: 300;
+            margin-bottom: 3em;
+            color: var(--secondary);
+        }
+
+        .cover-meta {
+            font-size: 10pt;
+            opacity: 0.8;
+            line-height: 2;
+        }
+
+        .cover-meta strong {
+            color: var(--secondary);
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 2em;
+            page-break-inside: avoid;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28pt;
+            color: var(--primary);
+            margin-bottom: 0.5em;
+            padding-bottom: 0.3em;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: 600;
+            color: var(--primary);
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            margin-bottom: 1em;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        /* Key Metrics Box */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1em;
+            margin: 1.5em 0;
+        }
+
+        .metric-card {
+            background: var(--light);
+            padding: 1em;
+            border-radius: 8px;
+            text-align: center;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .metric-value {
+            font-size: 20pt;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .metric-label {
+            font-size: 9pt;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: white;
+            padding: 1.5em;
+            border-radius: 8px;
+            margin: 1.5em 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--secondary);
+            margin-top: 0;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+            font-size: 10pt;
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 0.75em;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 0.75em;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        tr:nth-child(even) {
+            background: var(--light);
+        }
+
+        /* Phase Cards */
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1em;
+            margin: 1.5em 0;
+        }
+
+        .phase-card {
+            background: var(--light);
+            padding: 1.25em;
+            border-radius: 8px;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .phase-number {
+            font-size: 9pt;
+            font-weight: 600;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phase-title {
+            font-size: 12pt;
+            font-weight: 600;
+            color: var(--primary);
+            margin: 0.5em 0;
+        }
+
+        .phase-card ul {
+            font-size: 10pt;
+            margin-left: 1em;
+        }
+
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2em;
+        }
+
+        /* Confidential Footer */
+        .confidential {
+            text-align: center;
+            font-size: 9pt;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 3em;
+            padding-top: 1em;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        /* Page Break */
+        .page-break {
+            page-break-after: always;
+        }
+
+        /* TOC */
+        .toc {
+            margin: 2em 0;
+        }
+
+        .toc-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5em 0;
+            border-bottom: 1px dotted #cbd5e0;
+        }
+
+        .toc-item:hover {
+            background: var(--light);
+        }
+
+        .toc-number {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-right: 1em;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cover Page -->
+    <div class="cover">
+        <div class="cover-logo">Pop<span>Top</span></div>
+        <div class="cover-subtitle">Business Plan</div>
+        <div class="cover-tagline">"The Centerpiece of Your Tailgate"</div>
+        <div class="cover-meta">
+            <strong>Company:</strong> PopTop, LLC (a Munn Family Holdings company)<br>
+            <strong>Jurisdiction:</strong> Indiana LLC<br>
+            <strong>Stage:</strong> Prototype to Pre-Launch<br>
+            <strong>Target RTM:</strong> Summer 2025<br>
+            <strong>Version:</strong> 1.0 | January 2025
+        </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="section">
+        <h1>Contents</h1>
+        <div class="toc">
+            <div class="toc-item"><span><span class="toc-number">01</span>Executive Summary</span><span>3</span></div>
+            <div class="toc-item"><span><span class="toc-number">02</span>Problem & Opportunity</span><span>4</span></div>
+            <div class="toc-item"><span><span class="toc-number">03</span>Product Overview</span><span>5</span></div>
+            <div class="toc-item"><span><span class="toc-number">04</span>Market Analysis</span><span>6</span></div>
+            <div class="toc-item"><span><span class="toc-number">05</span>Competitive Landscape</span><span>7</span></div>
+            <div class="toc-item"><span><span class="toc-number">06</span>Licensing & Partnerships</span><span>8</span></div>
+            <div class="toc-item"><span><span class="toc-number">07</span>Go-To-Market Strategy</span><span>9</span></div>
+            <div class="toc-item"><span><span class="toc-number">08</span>Brand & Positioning</span><span>10</span></div>
+            <div class="toc-item"><span><span class="toc-number">09</span>Operations & Manufacturing</span><span>11</span></div>
+            <div class="toc-item"><span><span class="toc-number">10</span>Team & Advisors</span><span>12</span></div>
+            <div class="toc-item"><span><span class="toc-number">11</span>Financial Projections</span><span>13</span></div>
+            <div class="toc-item"><span><span class="toc-number">12</span>Capital & Growth Strategy</span><span>14</span></div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Executive Summary -->
+    <div class="section">
+        <h1>01 Executive Summary</h1>
+
+        <p>PopTop is a consumer products company building a <strong>premium, category-defining beverage dispensing platform</strong> engineered specifically for collegiate sports tailgating and fan-centered social experiences.</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">$375</div>
+                <div class="metric-label">Target MSRP</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">60-65%</div>
+                <div class="metric-label">Gross Margin</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$10-20M</div>
+                <div class="metric-label">Initial SOM</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$500M+</div>
+                <div class="metric-label">Total TAM</div>
+            </div>
+        </div>
+
+        <p>The Company's flagship product is a high-capacity, portable, and visually distinctive drink dispenser designed to serve as the functional and social centerpiece of tailgates, watch parties, and outdoor fan gatherings. Unlike generic beverage dispensers, PopTop products are purpose-built for licensed collegiate branding, durability, and repeat use in demanding outdoor environments.</p>
+
+        <div class="highlight-box">
+            <h3>Strategic Vision</h3>
+            <p>PopTop is designed from inception as a <strong>brand and platform company</strong>, not a single-SKU novelty product. The long-term objective is to become the dominant and trusted name in premium beverage dispensing for social and fan-driven environments.</p>
+        </div>
+
+        <h2>Go-To-Market Strategy</h2>
+        <p>Establish a strong beachhead in collegiate athletics through direct-to-consumer sales and strategic licensing partnerships (CLC and Fanatics), then expand into additional product variants and adjacent markets including professional sports, outdoor lifestyle, hospitality, and events.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Problem & Opportunity -->
+    <div class="section">
+        <h1>02 Problem & Opportunity</h1>
+
+        <h2>The Problem</h2>
+        <p>Despite significant consumer spending on tailgating and fan gear, the beverage dispensing category remains fragmented, commoditized, and underserved. Existing options fall into three categories:</p>
+
+        <div class="two-col">
+            <div>
+                <h3>Current Market Failures</h3>
+                <ul>
+                    <li><strong>Low-cost plastic dispensers</strong> lacking durability, aesthetic appeal, and temperature performance</li>
+                    <li><strong>Novelty/keg-style products</strong> difficult to transport, clean, or brand consistently</li>
+                    <li><strong>Improvised solutions</strong> (coolers, tubs, cans) that don't scale for group use</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Market Gap</h3>
+                <p>None of these solutions are designed with <strong>collegiate fandom</strong>, <strong>licensed branding</strong>, or <strong>premium ownership experience</strong> as core design requirements.</p>
+                <p>There is no dominant brand in beverage dispensing analogous to YETI's position in coolers.</p>
+            </div>
+        </div>
+
+        <h2>The Opportunity</h2>
+        <p>Collegiate sports fandom represents one of the most passionate and ritual-driven consumer segments in the United States. Tailgating is central to the experience and often represents a multi-decade tradition for alumni and fans.</p>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">130+</div>
+                <div class="metric-label">FBS Programs</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">Millions</div>
+                <div class="metric-label">Engaged Fans</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">Premium</div>
+                <div class="metric-label">Spending Trend</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">High</div>
+                <div class="metric-label">Brand Loyalty</div>
+            </div>
+        </div>
+
+        <p>PopTop addresses this gap by offering a premium, licensed, and extensible beverage dispensing solution that elevates the social experience while reinforcing fan identity.</p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Product Overview -->
+    <div class="section">
+        <h1>03 Product Overview</h1>
+
+        <h2>Flagship Product (V1)</h2>
+        <p>A rugged, tabletop/portable drink dispenser designed specifically for tailgates and group events.</p>
+
+        <div class="two-col">
+            <div>
+                <h3>Core Features</h3>
+                <ul>
+                    <li>Durable, food-grade materials</li>
+                    <li>High-capacity reservoir (optimized for group use)</li>
+                    <li>Controlled pour / tap-style dispensing</li>
+                    <li>Modular branding surfaces (team logos, colors)</li>
+                    <li>Designed for ice compatibility</li>
+                    <li>Portable, easy-clean construction</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Target Economics</h3>
+                <table>
+                    <tr><td><strong>MSRP</strong></td><td>$350 - $400</td></tr>
+                    <tr><td><strong>Target ASP</strong></td><td>$375</td></tr>
+                    <tr><td><strong>Est. COGS</strong></td><td>~$140/unit</td></tr>
+                    <tr><td><strong>Gross Margin</strong></td><td>60 - 65%</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <h2>Product Roadmap</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Version</th>
+                    <th>Description</th>
+                    <th>Key Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>V1</strong></td>
+                    <td>Flagship Launch</td>
+                    <td>Core dispenser with ice compatibility</td>
+                </tr>
+                <tr>
+                    <td><strong>V2</strong></td>
+                    <td>Insulated/Refrigerated</td>
+                    <td>Enhanced temperature retention</td>
+                </tr>
+                <tr>
+                    <td><strong>V3</strong></td>
+                    <td>Electric-Powered</td>
+                    <td>AC outlet powered cooling</td>
+                </tr>
+                <tr>
+                    <td><strong>V4</strong></td>
+                    <td>Battery-Powered</td>
+                    <td>Portable cooling system</td>
+                </tr>
+                <tr>
+                    <td><strong>V5</strong></td>
+                    <td>Smart Dispensing</td>
+                    <td>Volume tracking, app integration</td>
+                </tr>
+                <tr>
+                    <td><strong>V6</strong></td>
+                    <td>Commercial/Hospitality</td>
+                    <td>High-volume, venue-grade</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h3>Platform Philosophy</h3>
+            <p>PopTop is intentionally engineered as a <strong>platform</strong>, not a one-off product. Each version builds on core IP while expanding addressable markets and use cases.</p>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Market Analysis -->
+    <div class="section">
+        <h1>04 Market Analysis</h1>
+
+        <h2>Target Customer Profile</h2>
+        <div class="two-col">
+            <div>
+                <h3>Primary Demographics</h3>
+                <ul>
+                    <li>Collegiate sports fans and alumni</li>
+                    <li>Tailgaters and watch-party hosts</li>
+                    <li>Booster clubs and alumni associations</li>
+                    <li>Age range: 25-60</li>
+                    <li>Middle to upper-middle income households</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Psychographics</h3>
+                <ul>
+                    <li>Value quality and durability</li>
+                    <li>Strong brand/team alignment</li>
+                    <li>Social signaling conscious</li>
+                    <li>Repeat purchasers of premium fan gear</li>
+                    <li>Multi-generational traditions</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Market Segmentation</h2>
+
+        <h3>Primary Market: Collegiate Athletics</h3>
+        <p>Initial focus on U.S. collegiate athletics, beginning with flagship programs and conferences where tailgating culture and discretionary spending are highest.</p>
+        <ul>
+            <li>Power 5 conferences (SEC, Big Ten, Big 12, ACC, Pac-12)</li>
+            <li>Major football and basketball programs</li>
+            <li>Schools with strong licensing ecosystems</li>
+        </ul>
+
+        <h3>Secondary & Expansion Markets</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Market</th>
+                    <th>Opportunity</th>
+                    <th>Timeline</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Professional Sports</td><td>NFL, MLB, NBA, NHL fanbases</td><td>Year 2-3</td></tr>
+                <tr><td>Outdoor/Lifestyle</td><td>Camping, RV, overlanding</td><td>Year 2-3</td></tr>
+                <tr><td>Corporate Events</td><td>Branded hospitality</td><td>Year 3+</td></tr>
+                <tr><td>Venue/Hospitality</td><td>Event rentals, stadiums</td><td>Year 3+</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Market Sizing</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">~130</div>
+                <div class="metric-label">FBS Programs</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0.25%</div>
+                <div class="metric-label">Initial Penetration</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$10-20M</div>
+                <div class="metric-label">Initial SOM</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$500M+</div>
+                <div class="metric-label">Total TAM</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Competitive Landscape -->
+    <div class="section">
+        <h1>05 Competitive Landscape</h1>
+
+        <div class="two-col">
+            <div>
+                <h2>Direct Competitors</h2>
+                <ul>
+                    <li>Generic drink dispensers (Amazon, big-box)</li>
+                    <li>Keg-style novelty products</li>
+                    <li>Basic plastic dispensers</li>
+                </ul>
+
+                <h2>Indirect Competitors</h2>
+                <ul>
+                    <li>Premium coolers (YETI, Igloo)</li>
+                    <li>Party beverage tubs</li>
+                    <li>DIY/improvised solutions</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Competitive Advantages</h2>
+                <ul>
+                    <li><strong>Purpose-built</strong> for tailgating use case</li>
+                    <li><strong>Premium design</strong> & materials</li>
+                    <li><strong>Licensed collegiate branding</strong></li>
+                    <li><strong>Platform extensibility</strong></li>
+                    <li><strong>Strong brand narrative</strong></li>
+                    <li><strong>First-mover</strong> in category</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Strategic Position</h3>
+            <p><strong>No incumbent brand owns this category.</strong> PopTop has the opportunity to establish category leadership similar to how YETI defined premium coolers. The combination of licensed branding + premium construction + tailgate-specific design creates a defensible moat.</p>
+        </div>
+
+        <h2>Competitive Matrix</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Factor</th>
+                    <th>Generic Dispensers</th>
+                    <th>Novelty Products</th>
+                    <th>YETI/Coolers</th>
+                    <th>PopTop</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Build Quality</td><td>Low</td><td>Low-Med</td><td>High</td><td>High</td></tr>
+                <tr><td>Collegiate Licensing</td><td>None</td><td>Limited</td><td>Some</td><td>Core</td></tr>
+                <tr><td>Tailgate-Specific</td><td>No</td><td>Partial</td><td>No</td><td>Yes</td></tr>
+                <tr><td>Price Point</td><td>$20-50</td><td>$50-150</td><td>$200-400</td><td>$350-400</td></tr>
+                <tr><td>Brand Premium</td><td>None</td><td>Low</td><td>High</td><td>High</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Licensing & Partnerships -->
+    <div class="section">
+        <h1>06 Licensing & Partnerships</h1>
+
+        <h2>Licensing Strategy</h2>
+        <p>Collegiate licensing is central to PopTop's value proposition and competitive moat. Licensed products command premium pricing and create emotional connection with consumers.</p>
+
+        <div class="phase-grid">
+            <div class="phase-card">
+                <div class="phase-number">Phase 1</div>
+                <div class="phase-title">Foundation</div>
+                <ul>
+                    <li>Establish CLC relationship</li>
+                    <li>Fanatics partnership</li>
+                    <li>3-5 flagship programs</li>
+                </ul>
+            </div>
+            <div class="phase-card">
+                <div class="phase-number">Phase 2</div>
+                <div class="phase-title">Expansion</div>
+                <ul>
+                    <li>Power 5 conferences</li>
+                    <li>Top 25 programs</li>
+                    <li>Regional expansion</li>
+                </ul>
+            </div>
+            <div class="phase-card">
+                <div class="phase-number">Phase 3</div>
+                <div class="phase-title">Scale</div>
+                <ul>
+                    <li>Full FBS coverage</li>
+                    <li>Pro sports leagues</li>
+                    <li>International</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Strategic Partners (Target)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Partner</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Fanatics</strong></td><td>Distribution & Licensing</td><td>Access to 300M+ customers, licensing infrastructure</td></tr>
+                <tr><td><strong>CLC</strong></td><td>Licensing Agent</td><td>200+ university relationships</td></tr>
+                <tr><td><strong>Campus Bookstores</strong></td><td>Retail Channel</td><td>Direct access to students/alumni</td></tr>
+                <tr><td><strong>Stadium Operators</strong></td><td>Retail/Events</td><td>High-traffic game day exposure</td></tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box">
+            <h3>Licensing as a Moat</h3>
+            <p>Licensing is a <strong>moat, not a tax</strong>. PopTop becomes a preferred platform partner rather than a one-off licensed item. Deep licensing relationships create barriers to entry for competitors and drive recurring revenue through new school additions.</p>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Go-To-Market Strategy -->
+    <div class="section">
+        <h1>07 Go-To-Market Strategy</h1>
+
+        <h2>Phased Approach</h2>
+        <div class="phase-grid">
+            <div class="phase-card">
+                <div class="phase-number">Phase 1</div>
+                <div class="phase-title">Direct-to-Consumer</div>
+                <ul>
+                    <li>PopTop.com launch</li>
+                    <li>Limited school drops</li>
+                    <li>Pre-orders / waitlists</li>
+                    <li>Scarcity-driven launches</li>
+                </ul>
+            </div>
+            <div class="phase-card">
+                <div class="phase-number">Phase 2</div>
+                <div class="phase-title">Strategic Wholesale</div>
+                <ul>
+                    <li>Fanatics integration</li>
+                    <li>Campus bookstores</li>
+                    <li>Sporting goods retailers</li>
+                    <li>Regional chains</li>
+                </ul>
+            </div>
+            <div class="phase-card">
+                <div class="phase-number">Phase 3</div>
+                <div class="phase-title">Enterprise & B2B</div>
+                <ul>
+                    <li>Alumni associations</li>
+                    <li>Corporate tailgates</li>
+                    <li>Event rentals</li>
+                    <li>Venue partnerships</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Marketing Strategy</h2>
+        <p>Marketing is <strong>visual, experiential, and social-first</strong>. The product should photograph exceptionally well and feel iconic when present at the tailgate.</p>
+
+        <div class="two-col">
+            <div>
+                <h3>Channels</h3>
+                <ul>
+                    <li>Instagram / TikTok (lifestyle content)</li>
+                    <li>Game day photography</li>
+                    <li>Influencer partnerships</li>
+                    <li>Alumni network activations</li>
+                    <li>Stadium/event presence</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Tactics</h3>
+                <ul>
+                    <li>Limited edition drops by school</li>
+                    <li>Early access for alumni groups</li>
+                    <li>User-generated content campaigns</li>
+                    <li>Rivalry week promotions</li>
+                    <li>Championship tie-ins</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Launch Timeline</h2>
+        <table>
+            <thead>
+                <tr><th>Milestone</th><th>Target</th><th>Focus</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Prototype Complete</td><td>Q1 2025</td><td>Engineering validation</td></tr>
+                <tr><td>Licensing Secured</td><td>Q2 2025</td><td>Initial school agreements</td></tr>
+                <tr><td>Production Run</td><td>Q2-Q3 2025</td><td>Manufacturing at scale</td></tr>
+                <tr><td>RTM Launch</td><td>Summer 2025</td><td>Pre-football season</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Brand & Positioning -->
+    <div class="section">
+        <h1>08 Brand & Positioning</h1>
+
+        <h2>Brand Attributes</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">Bold</div>
+                <div class="metric-label">Commanding Presence</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">Premium</div>
+                <div class="metric-label">Quality & Craft</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">Social</div>
+                <div class="metric-label">Community Focused</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">Tradition</div>
+                <div class="metric-label">Built to Last</div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Brand Positioning</h3>
+            <p style="font-size: 18pt; text-align: center; margin: 0;">"The Centerpiece of Your Tailgate"</p>
+        </div>
+
+        <h2>Brand Promise</h2>
+        <p>PopTop products are designed to be the functional and social centerpiece of every tailgate. When you show up with a PopTop, you're not just bringing drinks - you're bringing the party. The product should photograph exceptionally well and feel iconic when present for the big game.</p>
+
+        <h2>Visual Identity Guidelines</h2>
+        <div class="two-col">
+            <div>
+                <h3>Design Principles</h3>
+                <ul>
+                    <li>Clean, modern aesthetics</li>
+                    <li>Premium material finishes</li>
+                    <li>Bold, visible branding</li>
+                    <li>Modular customization</li>
+                    <li>Instagram-worthy design</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Brand Voice</h3>
+                <ul>
+                    <li>Confident but not arrogant</li>
+                    <li>Fun but not frivolous</li>
+                    <li>Premium but accessible</li>
+                    <li>Tradition-honoring</li>
+                    <li>Community-building</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Operations & Manufacturing -->
+    <div class="section">
+        <h1>09 Operations & Manufacturing</h1>
+
+        <h2>Product Development Status</h2>
+        <ul>
+            <li>Initial concept and product requirements defined</li>
+            <li>CAD design and engineering underway (SolidWorks)</li>
+            <li>Prototyping utilizing in-house 4'x4' 3D printing capability</li>
+        </ul>
+        <p>Design philosophy emphasizes <strong>durability, manufacturability, modularity, and licensing compliance</strong>.</p>
+
+        <h2>Manufacturing Strategy</h2>
+        <div class="phase-grid">
+            <div class="phase-card">
+                <div class="phase-number">Phase 1</div>
+                <div class="phase-title">Pilot Production</div>
+                <ul>
+                    <li>Low-volume runs</li>
+                    <li>Domestic/near-shore mfg</li>
+                    <li>Rapid iteration</li>
+                    <li>Field testing</li>
+                </ul>
+            </div>
+            <div class="phase-card">
+                <div class="phase-number">Phase 2</div>
+                <div class="phase-title">Scaled Production</div>
+                <ul>
+                    <li>Overseas partners</li>
+                    <li>US-based QC</li>
+                    <li>Tooling investment</li>
+                    <li>Volume pricing</li>
+                </ul>
+            </div>
+            <div class="phase-card">
+                <div class="phase-number">Phase 3</div>
+                <div class="phase-title">Full Scale</div>
+                <ul>
+                    <li>Multiple SKUs</li>
+                    <li>Regional distribution</li>
+                    <li>Inventory optimization</li>
+                    <li>JIT fulfillment</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Supply Chain Considerations</h2>
+        <table>
+            <thead>
+                <tr><th>Area</th><th>Approach</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Materials</td><td>Food-grade sourcing with supplier redundancy</td></tr>
+                <tr><td>Packaging</td><td>Designed for eCommerce shipping, premium unboxing</td></tr>
+                <tr><td>Inventory</td><td>Aligned with seasonal demand (football season)</td></tr>
+                <tr><td>Fulfillment</td><td>3PL partnership for scalable shipping</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Key Operational Risks & Mitigations</h2>
+        <table>
+            <thead>
+                <tr><th>Risk</th><th>Mitigation</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Tooling lead times</td><td>Early engagement, parallel development</td></tr>
+                <tr><td>Licensing approval delays</td><td>Multiple school pipeline, early submission</td></tr>
+                <tr><td>Demand seasonality</td><td>Conservative inventory, pre-order model</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Team & Advisors -->
+    <div class="section">
+        <h1>10 Team & Advisors</h1>
+
+        <h2>Core Team</h2>
+        <table>
+            <thead>
+                <tr><th>Role</th><th>Name</th><th>Responsibility</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Founders / Equity Holders</strong></td><td>Alex Munn, Ross Munn</td><td>Munn Family Holdings, LLC ownership, strategic direction</td></tr>
+                <tr><td><strong>Business Lead</strong></td><td>Paul Giarrizzo</td><td>Business plan, execution strategy, operations</td></tr>
+                <tr><td><strong>Engineering</strong></td><td>Brian Williams</td><td>SolidWorks CAD, 3D printing, prototyping, NPI to RTM</td></tr>
+                <tr><td><strong>Operations</strong></td><td>Nathan Childress</td><td>Team member, execution support</td></tr>
+            </tbody>
+        </table>
+
+        <h2>External Partners</h2>
+        <table>
+            <thead>
+                <tr><th>Function</th><th>Partner</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Legal / IP</td><td>Jeff Johnson (IP Law USA)</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Target Advisors</h2>
+        <ul>
+            <li>eCommerce distribution executive</li>
+            <li>Licensing specialist (collegiate/pro sports)</li>
+            <li>Consumer hardware scaling operator</li>
+        </ul>
+
+        <div class="highlight-box">
+            <h3>Team Strengths</h3>
+            <p>The team combines <strong>entrepreneurial drive</strong> with <strong>engineering capability</strong> and <strong>business acumen</strong>. In-house 3D printing capability (4'x4' printer) enables rapid prototyping and iteration without external dependencies.</p>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Financial Projections -->
+    <div class="section">
+        <h1>11 Financial Projections</h1>
+
+        <h2>Core Assumptions</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">$375</div>
+                <div class="metric-label">Average Selling Price</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$140</div>
+                <div class="metric-label">Est. COGS/Unit</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">62%</div>
+                <div class="metric-label">Gross Margin</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$235</div>
+                <div class="metric-label">Gross Profit/Unit</div>
+            </div>
+        </div>
+
+        <h2>Three-Year Projections</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Year 1 (Launch)</th>
+                    <th>Year 2</th>
+                    <th>Year 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Units Sold</strong></td>
+                    <td>2,500</td>
+                    <td>7,500</td>
+                    <td>20,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Revenue</strong></td>
+                    <td>$937,500</td>
+                    <td>$2,812,500</td>
+                    <td>$7,500,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Gross Profit</strong></td>
+                    <td>$587,500</td>
+                    <td>$1,762,500</td>
+                    <td>$4,700,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Gross Margin</strong></td>
+                    <td>62.7%</td>
+                    <td>62.7%</td>
+                    <td>62.7%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Year 1 Expense Categories</h2>
+        <ul>
+            <li>Tooling & manufacturing setup</li>
+            <li>Licensing fees and royalties</li>
+            <li>Initial inventory investment</li>
+            <li>Marketing launch campaign</li>
+            <li>Operations & fulfillment</li>
+        </ul>
+
+        <p><em>Projections exclude potential upside from additional product lines, international expansion, or enterprise/B2B sales.</em></p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Capital & Growth Strategy -->
+    <div class="section">
+        <h1>12 Capital & Growth Strategy</h1>
+
+        <h2>Initial Capital Needs</h2>
+        <table>
+            <thead>
+                <tr><th>Category</th><th>Use of Funds</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Tooling & Manufacturing</td><td>Mold development, production setup</td></tr>
+                <tr><td>Licensing Fees</td><td>CLC/school licensing agreements</td></tr>
+                <tr><td>Inventory</td><td>Initial production run</td></tr>
+                <tr><td>Marketing Launch</td><td>Brand development, campaign execution</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Funding Strategy</h2>
+        <div class="highlight-box">
+            <h3>Target Raise (Optional)</h3>
+            <p style="font-size: 24pt; text-align: center; margin-bottom: 0.5em;"><strong>$500K - $1.5M</strong></p>
+            <p style="text-align: center; margin: 0;">Strategic investors preferred. Ideal partner brings <strong>distribution</strong>, <strong>licensing leverage</strong>, or <strong>eComm scale</strong>.</p>
+        </div>
+
+        <h2>Exit Vision</h2>
+        <div class="two-col">
+            <div>
+                <h3>Strategic Acquirers</h3>
+                <ul>
+                    <li>Fanatics</li>
+                    <li>YETI</li>
+                    <li>Private equity roll-up</li>
+                    <li>Consumer products conglomerate</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Exit Criteria</h3>
+                <ul>
+                    <li>Established brand leadership</li>
+                    <li>Proven unit economics</li>
+                    <li>Scalable licensing model</li>
+                    <li>Platform extensibility demonstrated</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Long-Term Vision</h3>
+            <p>PopTop aims to be the <strong>default beverage system for fans</strong>. Brand scales across beverage platforms and becomes synonymous with premium tailgate experiences.</p>
+        </div>
+    </div>
+
+    <div class="confidential">
+        This document is confidential and intended for strategic discussion purposes only.<br>
+        PopTop, LLC | A Munn Family Holdings Company | Indiana
+    </div>
+
+</body>
+</html>
