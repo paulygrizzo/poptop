@@ -7,7 +7,7 @@
 
 Hi team,
 
-Thanks for joining today's reboot call! Below are the meeting notes and action items. Please review your assigned items and let me know if you have any questions.
+Thanks for joining today's reboot call! Below are the meeting notes and action items (full notes can be found in the shared in [meeting-notes](https://drive.google.com/drive/folders/1_xovRxcV2Yhfsa1UO33hX_swrh70Z593?usp=drive_link) inside the Google Drive Folder. Please review your assigned items and let me know if you have any questions.
 
 Ross - wanted to loop you in on meeting notes going forward. We'll sync separately on manufacturing/supply chain topics.
 
@@ -29,7 +29,7 @@ Ross - wanted to loop you in on meeting notes going forward. We'll sync separate
 1. **Team commitment** - Everyone confirmed, same roles
 2. **Timeline** - Fall 2026 (Sep 1) launch target agreed
 3. **Trademark** - Alex to authorize Jeff Johnson to file ($1,300)
-4. **Standing call** - Thursdays going forward
+4. **Standing call** - Thursdays (12:15pm EST) going forward 
 5. **Communication** - TBD
 
 ## Engineering Update (Brian)
@@ -60,7 +60,7 @@ Ross - wanted to loop you in on meeting notes going forward. We'll sync separate
 - **Command Center:** [Google Sheet](https://docs.google.com/spreadsheets/d/1JJjYJitZ_jg7ui0JqdID7MtuhGamyZxS1wNbDVw0cp4/)
 - **Execution Plan v2.1:** [Attached]
 
-Next call: Thursday, Feb 13, 2026 at [TIME]
+Next call: Thursday, Feb 13, 2026 at 12:15pm EST
 
 Let's keep the momentum going!
 

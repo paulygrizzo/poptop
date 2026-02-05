@@ -1091,6 +1091,68 @@ function showOpenActionItems() {
   SpreadsheetApp.getUi().alert('Open Action Items', summary, SpreadsheetApp.getUi().ButtonSet.OK);
 }
 
+// ============================================
+// WEBHOOK ENDPOINT (for GitHub Actions)
+// ============================================
+
+/**
+ * Handle incoming webhook from GitHub Actions
+ * Deploy as Web App: Deploy > New Deployment > Web App > Execute as Me > Anyone
+ */
+function doPost(e) {
+  try {
+    const data = JSON.parse(e.postData.contents);
+    Logger.log('Webhook received: ' + JSON.stringify(data));
+
+    if (data.event === 'meeting_notes_updated') {
+      // Trigger a refresh of the dashboard
+      updateDashboard();
+
+      // Log the sync
+      const ss = SpreadsheetApp.getActiveSpreadsheet();
+      const configSheet = ss.getSheetByName('Config');
+      if (configSheet) {
+        // Find or create a sync log
+        configSheet.getRange('A20').setValue('Last GitHub Sync:');
+        configSheet.getRange('B20').setValue(new Date());
+        configSheet.getRange('C20').setValue(data.commit || 'unknown');
+      }
+
+      return ContentService.createTextOutput(JSON.stringify({
+        status: 'success',
+        message: 'Dashboard updated'
+      })).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    return ContentService.createTextOutput(JSON.stringify({
+      status: 'ok',
+      message: 'Event received'
+    })).setMimeType(ContentService.MimeType.JSON);
+
+  } catch (error) {
+    Logger.log('Webhook error: ' + error.message);
+    return ContentService.createTextOutput(JSON.stringify({
+      status: 'error',
+      message: error.message
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+/**
+ * Handle GET requests (for testing webhook URL)
+ */
+function doGet(e) {
+  return ContentService.createTextOutput(JSON.stringify({
+    status: 'ok',
+    message: 'PopTop webhook endpoint is live',
+    timestamp: new Date().toISOString()
+  })).setMimeType(ContentService.MimeType.JSON);
+}
+
+// ============================================
+// TEST FUNCTIONS
+// ============================================
+
 /**
  * Test function to verify everything works
  */

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
-                "mode": "source",
+                "file": "10-Team-Docs/meeting-notes/2026-02-06-email-draft.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-02-06-thursday-standup-agenda"
+              "title": "2026-02-06-email-draft"
             }
           },
           {
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
+                "file": "10-Team-Docs/meeting-notes/2026-02-06-email-draft.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026-02-06-thursday-standup-agenda"
+              "title": "Backlinks for 2026-02-06-email-draft"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
+                "file": "10-Team-Docs/meeting-notes/2026-02-06-email-draft.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-02-06-thursday-standup-agenda"
+              "title": "Outgoing links from 2026-02-06-email-draft"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
+                "file": "10-Team-Docs/meeting-notes/2026-02-06-email-draft.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-02-06-thursday-standup-agenda"
+              "title": "Outline of 2026-02-06-email-draft"
             }
           }
         ]
@@ -200,13 +200,16 @@
   },
   "active": "0e95df202233237a",
   "lastOpenFiles": [
+    "scripts/poptop-tools.sh",
+    "scripts/generate-email-html.sh",
+    "scripts/watch-meeting-notes.sh",
+    "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
     "scripts/process-meeting-notes.sh",
     "scripts",
     "dashboard/docs/meeting-automation-setup.md",
     "10-Team-Docs/meeting-notes/2026-02-06-email-draft.md",
     "dashboard/initial-action-items-data.tsv",
     "02-Legal-IP/trademark-domain-research-2025-02-03.md",
-    "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
     "Pop Top Tracker.gsheet",
     "10-Team-Docs/meeting-notes/2025-02-05-wednesday-standup-agenda.md"
   ]
