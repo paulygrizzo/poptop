@@ -10,7 +10,7 @@
 **Lead: Paul**
 
 - Acknowledge the gap since last active push (Jan 2025)
-- Restate the opportunity: collegiate tailgating market, licensing-first model
+	- Restate the opportunity: collegiate tailgating market, licensing-first model
 - New target: **Launch before Summer 2026 College Football season**
 - This call is about getting aligned, re-committed, and moving
 

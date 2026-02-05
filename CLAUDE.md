@@ -1,68 +1,98 @@
 # PopTop Project Checkpoint
 
-**Last Updated:** February 4, 2026
-**Session Context:** Call prep session. Updated execution plan + agenda with Jeff Johnson trademark findings, built Dashboard tab function, regenerated PDF.
+**Last Updated:** February 5, 2026 (12:50 AM)
+**Session Context:** Major infrastructure session. Set up Git/GitHub, Google Drive sync, Obsidian, expanded tasks, team roster update. Ready for Thursday reboot call.
 
 ---
 
 ## Current Goal
 
-Launch PopTop (premium beverage dispenser for collegiate tailgating) before the **2026 College Football season** (target: September 1, 2026). Immediate focus: execute Thursday Feb 6 reboot call, get team re-committed, authorize trademark filing, move to Wednesday standing calls.
+Launch PopTop (premium beverage dispenser for collegiate tailgating) before the **2026 College Football season** (target: September 1, 2026).
+
+**Immediate focus:** Execute Thursday Feb 6 reboot call, get team re-committed, authorize trademark filing ($1,300), establish Wednesday standing calls.
 
 ---
 
-## Completed This Session (Feb 4, 2026)
+## Completed This Session (Feb 4-5, 2026)
 
-### Updates Made
-- **Execution Plan v2.1** -- Updated trademark section with Jeff Johnson's actual attorney findings (he recommends proceeding, $1,300 to file). Updated standing call day to Wednesday (with Thursday Feb 6 kickoff). Updated risk register. Regenerated PDF.
-- **Thursday Agenda** (`10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md`) -- Added trademark update section (Jeff Johnson's findings + $1,300 filing decision). Updated action items. Added Section 5 for trademark decision. Updated standing call logistics to propose Wednesday recurring.
-- **Dashboard function** -- Wrote `updateDashboard()` in Apps Script (`dashboard/apps-script/Code.gs`). Auto-populates the blank Dashboard tab with live data: quick stats, phase progress bars, overdue tasks, team workload, milestones. Added to PopTop menu. Auto-refreshes on task edits.
-- **PDF regenerated** (`10-Team-Docs/PopTop-Execution-Plan-v2.pdf`) -- Matches updated markdown.
+### Infrastructure Setup
+- **Git initialized** -- Local repo created, initial commit with all project files
+- **GitHub repo** -- Pushed to https://github.com/paulygrizzo/poptop (private)
+- **SSH key** -- Created `~/.ssh/paulygrizzo_github` for paulygrizzo account (separate from paulgiarrizzofortis)
+- **Google Drive Desktop** -- Installed, streaming mode (files stay in cloud, don't fill local disk)
+- **Poptop folder moved to Google Drive** -- Now syncs to cloud automatically
+- **Symlink created** -- `/Users/paulgiarrizzo/Projects/poptop` → Google Drive location (both paths work)
+- **Obsidian installed** -- For viewing/editing .md files with Live Preview mode
 
-### Jeff Johnson Trademark Thread (Summarized from Emails)
-- **Apr 17-22, 2025:** Engaged Jeff Johnson (IP Law USA, Mesa AZ). Told him product is beverage dispensers -- canned/bottled first, then liquid/carbonated.
-- **Apr 28, 2025:** Jeff delivered search results. Found "Pop Top" (Class 21, water bottles) and "Top Pop" (Class 32, soft drinks). **His assessment: neither is a showstopper. Recommends proceeding.** Filing cost: $1,300 (1 class), $350/class extra if needed.
-- **Apr 30 & May 29, 2025:** Jeff followed up twice asking for authorization.
-- **Jun 13, 2025:** Paul replied -- said he wanted to proceed, promised answer by Monday/Tuesday.
-- **Jun 18, 2025:** Jeff acknowledged, said "sit tight until you give the green light."
-- **Current status:** Jeff's firm is **waiting for authorization to file. ~8 months waiting.** Decision needed on Feb 6 call.
+### Documents Updated
+- **Execution Plan v2.1** -- Updated trademark section with Jeff Johnson's actual findings, changed standing call to Wednesdays, updated risk register
+- **PDF renamed** to `PopTop-Execution-Plan-v2.1.pdf`
+- **Thursday Agenda** -- Added Section 5 for trademark decision ($1,300), updated action items
+- **Team roster** -- Replaced Nathan Childress with Whitney Sanchez (Alex's sister) in all files
+
+### New Files Created
+- **`dashboard/expanded-tasks-v2.tsv`** -- 71 new detailed tasks covering:
+  - Landing page / coming soon site (8 tasks)
+  - Business formation & admin (12 tasks)
+  - ERP / QuickBooks setup (6 tasks)
+  - E-commerce / Shopify (20 tasks)
+  - Marketing / content (15 tasks)
+  - Distributor channel (8 tasks)
+  - Customer service (2 tasks)
+- **`dashboard/initial-meetings-data.tsv`** -- Meetings tab data (Feb 6 call + weekly placeholders)
+- **`dashboard/initial-decisions-data.tsv`** -- Decisions tab data (10 key decisions made to date)
+
+### Jeff Johnson Trademark Summary (from email thread)
+- **Apr 2025:** Professional trademark search completed
+- **Finding:** "Pop Top" (Class 21) and "Top Pop" (Class 32) found, but **neither is a showstopper**
+- **Recommendation:** Proceed with filing
+- **Cost:** $1,300 (1 class), $350/class extra if needed
+- **Status:** Jeff's firm waiting for authorization since June 18, 2025 (~8 months)
+- **Action:** Team decision needed on Feb 6 call
 
 ---
 
 ## In Progress / Paused
 
-- **Team email send** -- Paul needs to send v2.1 PDF + agenda to Alex, Brian, Nathan before Thursday call.
-- **Calendar invite** -- Paul needs to send Thursday Feb 6 invite with video link, then set up recurring Wednesday starting Feb 11.
-- **Ross Munn outreach** -- Not on Thursday call. Paul needs to contact separately by Feb 8.
-- **Dashboard deployment** -- `updateDashboard()` function written in local Code.gs file. Paul needs to copy updated Apps Script into the Google Sheet (Extensions > Apps Script > replace code > save > run `updateDashboard` once).
+### Paul's Pre-Call Tasks
+- [ ] Send team email with v2.1 PDF + Thursday agenda (invite already sent)
+- [ ] Copy updated Apps Script into Google Sheet and run `updateDashboard()`
+- [ ] Paste Meetings tab data into Google Sheet
+- [ ] Paste Decisions tab data into Google Sheet
+- [ ] Expanded tasks already pasted (assigned to Whitney for now)
+- [ ] Contact Ross Munn separately by Feb 8
+
+### Pending Automation (Tomorrow/Friday)
+- [ ] **Level 2: GitHub → Google Sheets auto-sync** -- Changes pushed to GitHub auto-update the Sheet
+- [ ] **Meeting recorder integration** -- Free tool to record call → transcribe → auto-update .md notes → update Sheet → email minutes to team
+- [ ] **Auto-detect saved notes** -- Trigger processing without Paul prompting "I finished notes"
+- [ ] **Apps Script Dashboard tab** -- Copy `dashboard/apps-script/Code.gs` into Google Sheet
 
 ---
 
 ## Next Steps
 
-### Before Thursday (Feb 6)
-- [ ] **Paul:** Send team email with v2.1 PDF + Thursday agenda
-- [ ] **Paul:** Send Thursday calendar invite with video link
-- [ ] **Paul:** Copy updated Apps Script into Google Sheet and run `updateDashboard()`
+### Before Thursday Call (Feb 6)
+- [ ] Send team email with v2.1 PDF + agenda
+- [ ] Paste Meetings and Decisions data into Google Sheet
+- [ ] Run `updateDashboard()` in Google Sheet Apps Script
 
-### Thursday Call (Feb 6) -- Key Decisions
+### Thursday Call (Feb 6) -- Key Decisions Needed
 1. **Team commitment** -- Is everyone still in, same roles?
 2. **Timeline** -- Fall 2026 (Sep 1) target agreed?
 3. **Capital** -- Can we fund initial phases ($4-10K near-term)?
 4. **Brian's agreement** -- Signed or path to signing?
-5. **Trademark** -- Authorize Jeff Johnson to file ($1,300)? Attorney recommends proceeding.
+5. **Trademark** -- Authorize Jeff Johnson to file ($1,300)?
 6. **Standing call day** -- Move to Wednesdays starting Feb 11?
-7. **Communication** -- How do we stay in touch between calls?
+7. **Communication** -- Group text, Slack, or Discord?
 
 ### After Thursday
-- [ ] Email Jeff Johnson: "Go ahead and file" (if authorized on call)
+- [ ] Email Jeff Johnson: "Go ahead and file" (if authorized)
 - [ ] Share Google Sheets Command Center with team (Editor access)
-- [ ] Send user guide (`dashboard/docs/user-guide.md`)
-- [ ] Contact Ross Munn separately with update
-- [ ] Begin CLC licensing research (Phase 4)
-- [ ] Brian: review existing CAD files, confirm design freeze timeline
-- [ ] Alex: register domain (drinkpoptop.com or getpoptop.com)
-- [ ] Nathan: social media handles + communication channel setup
+- [ ] Set up Level 2 automation (GitHub → Sheets sync)
+- [ ] Set up meeting recorder workflow
+- [ ] Contact Ross Munn with update
+- [ ] Begin CLC licensing research
 
 ---
 
@@ -72,13 +102,14 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 |----------|--------|-----------|
 | Project folder name | `poptop` (lowercase) | Per user preference |
 | Dashboard platform | Google Sheets + Apps Script | 100% free, collaborative, automation capable |
-| TAM figure | $500M+ | Validated vs YETI comparable |
-| GTM strategy | Licensing-First | CLC/Fanatics approach |
-| **RTM target** | **Sep 1, 2026 (Fall 2026)** | Before College Football season |
-| **Standing call** | **Wednesdays (kickoff: Thursday Feb 6)** | Recurring cadence for execution |
-| **Execution Plan version** | **v2.1** | Aggressive 7-month reset, all 2026 dates |
-| **Trademark approach** | **Jeff Johnson recommends proceeding** | Professional search found no showstoppers. $1,300 to file. Awaiting team authorization. |
-| **Domain strategy** | **drinkpoptop.com or getpoptop.com** | poptop.com too expensive (Sedo premium) |
+| RTM target | **Sep 1, 2026 (Fall 2026)** | Before College Football season |
+| Standing call | **Wednesdays** (kickoff Thu Feb 6) | Recurring cadence for execution |
+| Trademark approach | **Jeff Johnson recommends proceeding** | Professional search found no showstoppers. $1,300 to file. |
+| Domain strategy | drinkpoptop.com or getpoptop.com | poptop.com too expensive |
+| Team change | **Whitney Sanchez replaces Nathan** | Nathan unavailable; Whitney is Alex's sister |
+| Version control | **GitHub (paulygrizzo/poptop)** | Private repo, SSH key configured |
+| File sync | **Google Drive Desktop (streaming mode)** | Cloud backup without filling local disk |
+| Markdown editor | **Obsidian** | Live Preview mode, beautiful UI |
 
 ---
 
@@ -88,7 +119,7 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 |------|------|---------------|--------|
 | Paul Giarrizzo | Business Lead | Execution driver, licensing, GTM | Active |
 | Alex Munn | Co-Founder | Strategic decisions, capital | Active |
-| Ross Munn | Co-Founder | Manufacturing, suppliers | TBD (needs outreach before call) |
+| Ross Munn | Co-Founder | Manufacturing, suppliers | TBD (needs outreach) |
 | Brian Williams | Engineer | SolidWorks CAD, prototyping, 3D printing | TBD (Thursday call) |
 | Whitney Sanchez | Operations | Task support, social media | New (Alex's sister) |
 
@@ -96,7 +127,7 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 
 ## Key Dates
 
-- **Kickoff Call:** February 6, 2026 (Thursday)
+- **Kickoff Call:** February 6, 2026 (Thursday) -- TOMORROW
 - **Recurring Standing Call:** Wednesdays starting February 11, 2026
 - **Design Freeze Target:** April 24, 2026
 - **CLC Submission Target:** May 1, 2026
@@ -106,68 +137,84 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 
 ## Relevant Files
 
-### Key Documents (Share with Team)
+### Project Location
 ```
-01-Business-Plan/final/PopTop-Business-Plan-v1.pdf         <- For investors & team
-10-Team-Docs/PopTop-Execution-Plan-v2.pdf                   <- CURRENT -- share this one
-10-Team-Docs/PopTop-Execution-Plan-v2.md                    <- Text version (source of truth)
-10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md  <- Thursday call agenda
-```
-
-### Legal/IP
-```
-02-Legal-IP/trademark-domain-research-2025-02-03.md         <- Internal trademark + domain research
+ACTUAL:   /Users/paulgiarrizzo/Library/CloudStorage/GoogleDrive-paul.giarrizzo@gmail.com/My Drive/poptop
+SYMLINK:  /Users/paulgiarrizzo/Projects/poptop  (points to above)
+GITHUB:   https://github.com/paulygrizzo/poptop (private)
 ```
 
-### Dashboard (DEPLOYED)
+### Key Documents
 ```
-dashboard/initial-task-data.tsv          <- 94 tasks (in Google Sheet)
-dashboard/initial-phases-data.tsv        <- 7 phases
-dashboard/initial-risks-data.tsv         <- 8 risks
-dashboard/initial-config-data.tsv        <- Config settings
-dashboard/apps-script/Code.gs            <- Automation code (UPDATED -- includes updateDashboard())
-dashboard/sheets-template.md             <- Template reference
-dashboard/docs/user-guide.md             <- For team members
-dashboard/docs/automation-guide.md       <- Setup instructions
+10-Team-Docs/PopTop-Execution-Plan-v2.1.pdf                <- Share with team
+10-Team-Docs/PopTop-Execution-Plan-v2.md                   <- Source of truth
+10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md  <- Tomorrow's agenda
+01-Business-Plan/final/PopTop-Business-Plan-v1.pdf         <- For investors
 ```
 
-### PDF Generators
+### Dashboard Data (paste into Google Sheet)
 ```
-10-Team-Docs/generate_execution_pdf_v2.py       <- v2.1 PDF generator (UPDATED)
+dashboard/expanded-tasks-v2.tsv         <- 71 new tasks (ALREADY PASTED by Paul)
+dashboard/initial-meetings-data.tsv     <- Meetings tab data (NEEDS PASTE)
+dashboard/initial-decisions-data.tsv    <- Decisions tab data (NEEDS PASTE)
+dashboard/apps-script/Code.gs           <- Updated with updateDashboard() (NEEDS COPY TO SHEET)
 ```
 
-### CAD Files (Brian's Work)
+### SSH Key (for GitHub pushes)
 ```
-~/Desktop/Pop Top Drawings/CenterMag_With_Cradle.SLDASM
-~/Desktop/Pop Top Drawings/PopTop_Can_Holder.STEP
-~/Desktop/Pop Top Drawings/PopTop_Container_Top.STEP
-~/Desktop/Pop Top Drawings/PopTop_Lid.STEP
-~/Desktop/Pop Top Drawings/PopTop_Tube.STEP
-~/Desktop/Pop Top Drawings/PopTop_CenterMag.STL
-~/Desktop/Pop Top Drawings/PopTop_Curved_Part.STL
+~/.ssh/paulygrizzo_github               <- Private key
+~/.ssh/paulygrizzo_github.pub           <- Public key (added to github.com/paulygrizzo)
+~/.ssh/config                           <- Has Host github-paulygrizzo entry
 ```
+
+---
+
+## Google Sheet
+
+**URL:** https://docs.google.com/spreadsheets/d/1JJjYJitZ_jg7ui0JqdID7MtuhGamyZxS1wNbDVw0cp4/
+
+**Tab Status:**
+| Tab | Status |
+|-----|--------|
+| Tasks | Populated (87 original + 71 expanded = 158 tasks) |
+| Phases | Populated |
+| Team | Needs Whitney added, Nathan removed |
+| Meetings | EMPTY -- paste `initial-meetings-data.tsv` |
+| Decisions | EMPTY -- paste `initial-decisions-data.tsv` |
+| Risks | Populated |
+| Config | Populated |
+| Dashboard | EMPTY -- run `updateDashboard()` after updating Apps Script |
 
 ---
 
 ## Trademark Situation (READY TO FILE)
 
-**Jeff Johnson (IP Law USA)** completed a professional federal trademark search in April 2025. Found two potentially relevant marks but **recommends proceeding** -- neither is a showstopper for beverage dispensers.
+**Jeff Johnson (IP Law USA)** completed professional search April 2025. Recommends proceeding.
 
-**Filing cost:** $1,300 (1 class). $350/class extra if USPTO requires additional classes.
+**Filing cost:** $1,300 (1 class)
 
-**Current status:** Jeff's firm has been waiting for authorization since June 18, 2025. Paul indicated intent to proceed but never gave final green light. **Team decision needed on Feb 6 call.**
+**Status:** Waiting for authorization since June 2025. **Decision needed Feb 6 call.**
 
-**Key contacts:**
-- Jeff Johnson, Partner -- jjohnson@iplawusa.com
+**Contacts:**
+- Jeff Johnson -- jjohnson@iplawusa.com
 - Steven Adams -- sadams@iplawusa.com
 - Firm: SOW, 18 E. University Drive, Suite 101, Mesa, AZ 85201
 
 ---
 
+## Pending Automation (Tomorrow/Friday)
+
+1. **GitHub → Google Sheets sync** -- Push changes, Sheet auto-updates
+2. **Meeting recorder** -- Record call → transcribe → update .md → update Sheet → email team
+3. **Auto-detect saved notes** -- No manual "I'm done" prompt needed
+4. **Obsidian + Git hooks** -- Auto-commit/push on save (optional)
+
+---
+
 ## Notes
 
-- Brian has a Product Development & Royalty Agreement pending (5% royalty, Option A: 5-year term OR Option B: $175K cap) -- UNSIGNED
-- Google Sheet Command Center: [Link](https://docs.google.com/spreadsheets/d/1JJjYJitZ_jg7ui0JqdID7MtuhGamyZxS1wNbDVw0cp4/)
-- Dashboard tab was blank -- `updateDashboard()` function now written in Code.gs. Paul needs to update the Apps Script in the Sheet and run it once.
+- Brian's Product Development & Royalty Agreement still UNSIGNED (5% royalty, $175K cap or 5-year term)
 - Ross Munn not on Thursday call -- needs separate update by Feb 8
-- v1 execution plan and business plan are still valid reference docs but v2.1 execution plan is the current source of truth
+- Paul uses Obsidian for .md files (Live Preview mode) -- auto-saves
+- poptop folder syncs via Google Drive (streaming mode -- doesn't fill local disk)
+- Git remote uses SSH via `github-paulygrizzo` host alias
