@@ -1,0 +1,11 @@
+ID	Date	Decision	Context	Made By	Impact	Reversible
+1	1/29/2025	Project folder name: poptop (lowercase)	User preference for consistency	Paul	File organization	Yes
+2	1/29/2025	Dashboard platform: Google Sheets + Apps Script	100% free, collaborative, automation capable	Paul	Project tracking infrastructure	Yes
+3	1/29/2025	TAM figure: $500M+	Validated vs YETI comparable market size	Paul	Business plan, investor pitch	No
+4	1/29/2025	GTM strategy: Licensing-First	CLC/Fanatics approach for collegiate market	Paul, Alex	Go-to-market, revenue model	Yes
+5	2/4/2026	RTM target: Sep 1, 2026	Before College Football season; aggressive 7-month timeline	Paul	All phase timelines, resource planning	Yes
+6	2/4/2026	Standing call: Wednesdays (kickoff Thu Feb 6)	Recurring cadence for team execution	Paul	Team coordination	Yes
+7	2/4/2026	Trademark approach: Proceed with filing	Jeff Johnson (attorney) completed search Apr 2025, recommends proceeding. $1,300 filing cost.	Paul (pending team approval)	Brand protection, IP	No
+8	2/4/2026	Domain strategy: drinkpoptop.com or getpoptop.com	poptop.com too expensive (Sedo premium)	Paul	Web presence, branding	Yes
+9	2/4/2026	Team change: Whitney Sanchez replaces Nathan Childress	Nathan unavailable; Whitney (Alex's sister) joining as Operations	Paul, Alex	Task assignments, team structure	Yes
+10	2/4/2026	Project files synced to Google Drive + GitHub	Cloud backup, version control, collaboration	Paul	File management, disaster recovery	Yes
