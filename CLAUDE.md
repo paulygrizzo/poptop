@@ -1,7 +1,7 @@
 # PopTop Project Checkpoint
 
-**Last Updated:** February 5, 2026 (12:50 AM)
-**Session Context:** Major infrastructure session. Set up Git/GitHub, Google Drive sync, Obsidian, expanded tasks, team roster update. Ready for Thursday reboot call.
+**Last Updated:** February 5, 2026 (11:30 AM)
+**Session Context:** Post-call updates. Added Action Items tracking system, meeting notes email automation, AR tab for Google Sheet. Thursday call completed.
 
 ---
 
@@ -49,6 +49,16 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 - **Cost:** $1,300 (1 class), $350/class extra if needed
 - **Status:** Jeff's firm waiting for authorization since June 18, 2025 (~8 months)
 - **Action:** Team decision needed on Feb 6 call
+
+### Completed Feb 5, 2026 (This Session)
+- **Action Items system** -- Added AR tracking to meeting notes with numbered items (AR-001, etc.)
+- **Action Items tab data** -- Created `dashboard/initial-action-items-data.tsv` for Google Sheet
+- **Apps Script updated** -- Added Action Items tab support, meeting notes email function
+- **Meeting notes updated** -- Added AR table to top, extracted 8 action items from call
+- **Email draft created** -- `10-Team-Docs/meeting-notes/2026-02-06-email-draft.md`
+- **Meeting automation docs** -- `dashboard/docs/meeting-automation-setup.md`
+- **Processing script** -- `scripts/process-meeting-notes.sh` for future automation
+- **Whitney added** -- Email: whitneychristine89@gmail.com
 
 ---
 
@@ -154,10 +164,11 @@ GITHUB:   https://github.com/paulygrizzo/poptop (private)
 
 ### Dashboard Data (paste into Google Sheet)
 ```
-dashboard/expanded-tasks-v2.tsv         <- 71 new tasks (ALREADY PASTED by Paul)
-dashboard/initial-meetings-data.tsv     <- Meetings tab data (NEEDS PASTE)
-dashboard/initial-decisions-data.tsv    <- Decisions tab data (NEEDS PASTE)
-dashboard/apps-script/Code.gs           <- Updated with updateDashboard() (NEEDS COPY TO SHEET)
+dashboard/expanded-tasks-v2.tsv            <- 71 new tasks (ALREADY PASTED by Paul)
+dashboard/initial-meetings-data.tsv        <- Meetings tab data (NEEDS PASTE)
+dashboard/initial-decisions-data.tsv       <- Decisions tab data (NEEDS PASTE)
+dashboard/initial-action-items-data.tsv    <- Action Items tab (NEEDS PASTE - 8 ARs)
+dashboard/apps-script/Code.gs              <- Updated with AR support + email (NEEDS COPY TO SHEET)
 ```
 
 ### SSH Key (for GitHub pushes)
@@ -178,9 +189,10 @@ dashboard/apps-script/Code.gs           <- Updated with updateDashboard() (NEEDS
 |-----|--------|
 | Tasks | Populated (87 original + 71 expanded = 158 tasks) |
 | Phases | Populated |
-| Team | Needs Whitney added, Nathan removed |
+| Team | Whitney added (whitneychristine89@gmail.com), Nathan removed |
 | Meetings | EMPTY -- paste `initial-meetings-data.tsv` |
 | Decisions | EMPTY -- paste `initial-decisions-data.tsv` |
+| Action Items | NEW -- paste `initial-action-items-data.tsv` (8 ARs from Feb 6 call) |
 | Risks | Populated |
 | Config | Populated |
 | Dashboard | EMPTY -- run `updateDashboard()` after updating Apps Script |
