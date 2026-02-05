@@ -1,6 +1,6 @@
 # Email Draft - Meeting Notes Feb 6, 2026
 
-**To:** Alex Munn, Brian Williams, Whitney Sanchez (whitneychristine89@gmail.com)
+**To:** Alex Munn, Brian Williams, Whitney Sanchez (whitneychristine89@gmail.com), Ross Munn (MunnRoss3@gmail.com)
 **Subject:** PopTop Meeting Notes - Thursday, Feb 6, 2026
 
 ---
@@ -9,26 +9,28 @@ Hi team,
 
 Thanks for joining today's reboot call! Below are the meeting notes and action items. Please review your assigned items and let me know if you have any questions.
 
+Ross - wanted to loop you in on meeting notes going forward. We'll sync separately on manufacturing/supply chain topics.
+
 ## Action Items
 
-| AR# | Owner | Action | Due |
-|-----|-------|--------|-----|
-| AR-001 | Whitney | Reach out for follow-up call | WW07 (Feb 10-14) |
-| AR-002 | Brian | Have 1st prototype pieces ready | WW06.2 (Feb 6-7) |
-| AR-003 | Brian | Drop CAD files into Engineering folder | WW06.2 |
-| AR-004 | Paul | Set up recurring Thursday calendar invite | WW07 |
-| AR-005 | Paul | Authorize Jeff Johnson trademark filing ($1,300) | Feb 7 |
-| AR-006 | Paul | Share Google Sheets Command Center with team | Feb 7 |
-| AR-007 | Alex | Confirm capital commitment for Phase 1-2 | Feb 13 |
-| AR-008 | Alex | Register domain (drinkpoptop.com or getpoptop.com) | Feb 13 |
+| AR# | Owner | Action | Due | Status |
+|-----|-------|--------|-----|--------|
+| AR-001 | Whitney | Reach out for follow-up call w/ Alex & Paul | WW06 (Feb 10-14) | Open |
+| AR-002 | Brian | Have 1st prototype pieces ready | WW06.2 (Feb 10) | Open |
+| AR-003 | Brian | Drop CAD files into Engineering folder | WW06.2 | Open |
+| AR-004 | Paul | Set up recurring Thursday calendar invite | WW06.4 | Complete |
+| AR-005 | Alex | Authorize Jeff Johnson trademark filing ($1,300) | WW06.5 (Feb 6) | Open |
+| AR-006 | Paul | Share Google Sheets Command Center with team | WW06.4 | Complete |
+| AR-007 | Alex | Confirm capital commitment for Phase 1-2 | Feb 13 | Open |
+| AR-008 | Alex | Register domain (drinkpoptop.com or getpoptop.com) | Feb 13 | Open |
 
 ## Key Decisions Made
 
 1. **Team commitment** - Everyone confirmed, same roles
 2. **Timeline** - Fall 2026 (Sep 1) launch target agreed
-3. **Trademark** - Authorized Jeff Johnson to file ($1,300)
+3. **Trademark** - Alex to authorize Jeff Johnson to file ($1,300)
 4. **Standing call** - Thursdays going forward
-5. **Communication** - [TBD based on call]
+5. **Communication** - TBD
 
 ## Engineering Update (Brian)
 

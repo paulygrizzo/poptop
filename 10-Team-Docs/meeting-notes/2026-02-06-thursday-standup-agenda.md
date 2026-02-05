@@ -8,16 +8,16 @@
 
 ## Action Items (from this call)
 
-| AR# | Owner | Action | Due | Status |
-|-----|-------|--------|-----|--------|
-| AR-001 | Whitney | Reach out for follow-up call | WW07 (Feb 10-14) | Open |
-| AR-002 | Brian | Have 1st prototype pieces ready | WW06.2 (Feb 6-7) | Open |
-| AR-003 | Brian | Drop CAD files into Engineering folder | WW06.2 | Open |
-| AR-004 | Paul | Set up recurring Thursday calendar invite | WW07 | Open |
-| AR-005 | Paul | Authorize Jeff Johnson trademark filing ($1,300) | Feb 7 | Open |
-| AR-006 | Paul | Share Google Sheets Command Center with team | Feb 7 | Open |
-| AR-007 | Alex | Confirm capital commitment for Phase 1-2 | Feb 13 | Open |
-| AR-008 | Alex | Register domain (drinkpoptop.com or getpoptop.com) | Feb 13 | Open |
+| AR#    | Owner   | Action                                             | Due              | Status   |
+| ------ | ------- | -------------------------------------------------- | ---------------- | -------- |
+| AR-001 | Whitney | Reach out for follow-up call w/ Alex & Paul        | WW06 (Feb 10-14) | Open     |
+| AR-002 | Brian   | Have 1st prototype pieces ready                    | WW06.2 (Feb 10)  | Open     |
+| AR-003 | Brian   | Drop CAD files into Engineering folder             | WW06.2           | Open     |
+| AR-004 | Paul    | Set up recurring Thursday calendar invite          | WW06.4           | Complete |
+| AR-005 | Alex    | Authorize Jeff Johnson trademark filing ($1,300)   | WW06.5 (Feb 6)   | Open     |
+| AR-006 | Paul    | Share Google Sheets Command Center with team       | WW06.4           | Complete |
+| AR-007 | Alex    | Confirm capital commitment for Phase 1-2           | Feb 13           | Open     |
+| AR-008 | Alex    | Register domain (drinkpoptop.com or getpoptop.com) | Feb 13           | Open     |
 
 ---
 
@@ -70,8 +70,8 @@ Go around -- each person confirms:
 - What's needed to get to a design freeze?
 	- Get thru prototype (likely multiple iterations)
 		- Springs (Vulcan Springs) - Will need to send a prototype
-		- Targeting to have pieces for 1st Prototype prior in WW06.2 - Brian
-		- Drop files into Eng. Folder - Brian
+		- Targeting to have pieces for 1st Prototype prior in WW06.2 (AR-002)
+		- Drop design files into Google Drive Eng. Folder (AR-003)
 - Dispensing mechanism design -- any progress or ideas?
 	- No concern/working on design
 - DFM considerations from what you've seen so far?
@@ -126,7 +126,7 @@ Quick update: Jeff Johnson (IP Law USA) completed a professional trademark searc
 Assign owners and due dates for the next 2 weeks:
 
 ### Paul
-- [ ] Authorize Jeff Johnson to file trademark (if agreed on call)
+
 - [ ] Share Google Sheets Command Center with team (Editor access)
 - [ ] Share updated execution plan v2.1 + user guide with team
 - [ ] Contact Ross Munn separately with update
@@ -137,6 +137,7 @@ Assign owners and due dates for the next 2 weeks:
 - [ ] Sign Product Development & Royalty Agreement (if not already done)
 
 ### Alex
+- [ ] Authorize Jeff Johnson to file trademark (if agreed on call)
 - [ ] Confirm capital commitment for Phase 1-2
 - [ ] Register best available domain (drinkpoptop.com or getpoptop.com)
 - [ ] Review updated execution plan
@@ -163,7 +164,7 @@ Assign owners and due dates for the next 2 weeks:
 
 1. **Team commitment** -- Is everyone still in, same roles?
 2. **Timeline** -- Fall 2026 (Sep 1) target agreed?
-3. **Capital** -- Can we fund initial phases ($4-10K near-term)?
+3. **Capital** -- Can we fund initial phases ($4-10K near-term)? (AR-007)
 4. **Brian's agreement** -- Signed or path to signing?
 5. **Trademark** -- Authorize Jeff Johnson to file ($1,300)? Attorney recommends proceeding.
 6. **Standing call day** -- Move to Wednesdays starting Feb 11?

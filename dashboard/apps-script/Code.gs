@@ -280,19 +280,18 @@ function sendDailyDigest() {
 </div>
 `;
 
-  // Send to all team members with emails
-  team.forEach(member => {
-    if (member.email && member.email.includes('@')) {
-      try {
-        MailApp.sendEmail({
-          to: member.email,
-          subject: subject,
-          htmlBody: body
-        });
-        Logger.log(`Digest sent to ${member.name} (${member.email})`);
-      } catch (e) {
-        Logger.log(`Failed to send to ${member.email}: ${e.message}`);
-      }
+  // Send to team members who want digest emails
+  const recipients = filterTeamByEmailPref(team, 'digest');
+  recipients.forEach(member => {
+    try {
+      MailApp.sendEmail({
+        to: member.email,
+        subject: subject,
+        htmlBody: body
+      });
+      Logger.log(`Digest sent to ${member.name} (${member.email})`);
+    } catch (e) {
+      Logger.log(`Failed to send to ${member.email}: ${e.message}`);
     }
   });
 }
@@ -449,18 +448,17 @@ function sendWeeklySummary() {
 </div>
 `;
 
-  // Send to all team members
-  team.forEach(member => {
-    if (member.email && member.email.includes('@')) {
-      try {
-        MailApp.sendEmail({
-          to: member.email,
-          subject: subject,
-          htmlBody: body
-        });
-      } catch (e) {
-        Logger.log(`Failed to send weekly summary to ${member.email}: ${e.message}`);
-      }
+  // Send to team members who want weekly emails
+  const recipients = filterTeamByEmailPref(team, 'weekly');
+  recipients.forEach(member => {
+    try {
+      MailApp.sendEmail({
+        to: member.email,
+        subject: subject,
+        htmlBody: body
+      });
+    } catch (e) {
+      Logger.log(`Failed to send weekly summary to ${member.email}: ${e.message}`);
     }
   });
 }
@@ -753,6 +751,7 @@ function getTasksData(sheet) {
 
 /**
  * Get team data from Team sheet
+ * Column F (index 5) = Email Preferences: "all", "meeting-notes-only", or "none"
  */
 function getTeamData(sheet) {
   const data = sheet.getDataRange().getValues();
@@ -767,11 +766,39 @@ function getTeamData(sheet) {
       role: row[1],
       email: row[2],
       phone: row[3],
-      area: row[4]
+      area: row[4],
+      emailPrefs: row[5] || 'all' // Default to 'all' if not specified
     });
   }
 
   return team;
+}
+
+/**
+ * Filter team members by email preference
+ * @param {Array} team - Team array from getTeamData
+ * @param {string} emailType - 'digest', 'weekly', 'alert', or 'meeting-notes'
+ */
+function filterTeamByEmailPref(team, emailType) {
+  return team.filter(member => {
+    if (!member.email || !member.email.includes('@')) return false;
+
+    const prefs = (member.emailPrefs || 'all').toLowerCase();
+
+    // 'none' receives no emails
+    if (prefs === 'none') return false;
+
+    // 'all' receives everything
+    if (prefs === 'all') return true;
+
+    // 'meeting-notes-only' only receives meeting notes
+    if (prefs === 'meeting-notes-only') {
+      return emailType === 'meeting-notes';
+    }
+
+    // Default: receive all
+    return true;
+  });
 }
 
 /**
@@ -1008,21 +1035,20 @@ function sendMeetingNotesEmail(meetingDate) {
 </div>
 `;
 
-  // Send to all team members
+  // Send to team members who want meeting notes (includes 'all' and 'meeting-notes-only')
+  const recipients = filterTeamByEmailPref(team, 'meeting-notes');
   let sentCount = 0;
-  team.forEach(member => {
-    if (member.email && member.email.includes('@')) {
-      try {
-        MailApp.sendEmail({
-          to: member.email,
-          subject: subject,
-          htmlBody: body
-        });
-        sentCount++;
-        Logger.log(`Meeting notes sent to ${member.name} (${member.email})`);
-      } catch (e) {
-        Logger.log(`Failed to send to ${member.email}: ${e.message}`);
-      }
+  recipients.forEach(member => {
+    try {
+      MailApp.sendEmail({
+        to: member.email,
+        subject: subject,
+        htmlBody: body
+      });
+      sentCount++;
+      Logger.log(`Meeting notes sent to ${member.name} (${member.email})`);
+    } catch (e) {
+      Logger.log(`Failed to send to ${member.email}: ${e.message}`);
     }
   });
 
