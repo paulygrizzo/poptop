@@ -1,6 +1,6 @@
 # PopTop Thursday Standing Call - Agenda
 **Date:** Thursday, February 6, 2026
-**Attendees:** Paul Giarrizzo, Alex Munn, Brian Williams, Nathan Childress (invited)
+**Attendees:** Paul Giarrizzo, Alex Munn, Brian Williams, Whitney Sanchez (invited)
 **Duration:** 30-45 minutes
 **Call Type:** Reboot / Realignment
 
@@ -29,7 +29,7 @@ Go around -- each person confirms:
 |------|------|----------|
 | Alex | Co-Founder | Capital availability -- can we fund Phase 1-2 ($20-30K)? |
 | Brian | Engineer | Can you commit to CAD/prototyping? Timeline for design freeze? |
-| Nathan | Operations | Available for task execution, social media, comms? |
+| Whitney | Operations | Available for task execution, social media, comms? |
 
 ---
 
@@ -103,7 +103,7 @@ Assign owners and due dates for the next 2 weeks:
 - [ ] Register best available domain (drinkpoptop.com or getpoptop.com)
 - [ ] Review updated execution plan
 
-### Nathan
+### Whitney
 - [ ] Review assigned tasks in Google Sheets Command Center
 - [ ] Begin social media handle research
 - [ ] Set up team communication channel (group text / Slack / Discord)

@@ -5,7 +5,7 @@ ID	Phase	Task Name	Owner	Status	Priority	Start Date	Due Date	Completed	Days Left
 4	Phase 0: Reboot	Alex: confirm capital for Phase 1-2	Alex Munn	Not Started	High	2/6/2026	2/13/2026			$20-30K initial need	1
 5	Phase 0: Reboot	Contact Ross - update & re-engage	Paul Giarrizzo	Not Started	High	2/6/2026	2/8/2026			Not on Thu call, needs separate update	1
 6	Phase 0: Reboot	Establish recurring Thursday standing call	Paul Giarrizzo	Not Started	High	2/6/2026	2/6/2026			Send calendar invite after first call	1
-7	Phase 0: Reboot	Set up team communication channel	Nathan Childress	Not Started	Medium	2/6/2026	2/13/2026			Text group, Slack, or Discord	1
+7	Phase 0: Reboot	Set up team communication channel	Whitney Sanchez	Not Started	Medium	2/6/2026	2/13/2026			Text group, Slack, or Discord	1
 8	Phase 0: Reboot	Deploy Google Sheets Command Center	Paul Giarrizzo	Complete	High	2/4/2026	2/6/2026	2/4/2026		Dashboard live
 9	Phase 0: Reboot	Share dashboard + docs with team	Paul Giarrizzo	Not Started	High	2/6/2026	2/8/2026			Send after Thu call	1,8
 10	Phase 0: Reboot	USPTO trademark search for PopTop	Paul Giarrizzo	Complete	High	2/3/2026	2/6/2026	2/3/2026		See 02-Legal-IP/trademark-domain-research report
@@ -14,7 +14,7 @@ ID	Phase	Task Name	Owner	Status	Priority	Start Date	Due Date	Completed	Days Left
 13	Phase 0: Reboot	Send trademark research to Jeff Johnson for legal assessment	Paul Giarrizzo	Not Started	High	2/6/2026	2/10/2026				10,12
 14	Phase 0: Reboot	Register best available domain (drinkpoptop.com or getpoptop.com)	Alex Munn	Not Started	High	2/6/2026	2/10/2026				11
 15	Phase 0: Reboot	Prepare 2-3 backup brand names	Paul Giarrizzo	Not Started	High	2/6/2026	2/13/2026			In case attorney flags trademark issues	12,13
-16	Phase 0: Reboot	Secure social media handles (matching domain)	Nathan Childress	Not Started	Medium	2/10/2026	2/17/2026			IG, TikTok, X, Facebook	14
+16	Phase 0: Reboot	Secure social media handles (matching domain)	Whitney Sanchez	Not Started	Medium	2/10/2026	2/17/2026			IG, TikTok, X, Facebook	14
 17	Phase 1: Design	Review existing CAD files, assess current state	Brian Williams	Not Started	High	2/9/2026	2/13/2026			STEP/STL/SLDASM files exist
 18	Phase 1: Design	Finalize V1 dimensions & capacity	Brian Williams	Not Started	High	2/13/2026	2/27/2026				17
 19	Phase 1: Design	Complete SolidWorks assembly	Brian Williams	Not Started	High	2/27/2026	3/13/2026				18
@@ -67,22 +67,22 @@ ID	Phase	Task Name	Owner	Status	Priority	Start Date	Due Date	Completed	Days Left
 66	Phase 5: GTM	Product photography	Paul Giarrizzo	Not Started	High	7/17/2026	7/24/2026			Need production samples	51
 67	Phase 5: GTM	Product copy & descriptions	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/31/2026				66
 68	Phase 5: GTM	Shipping rates configuration	Paul Giarrizzo	Not Started	Medium	7/24/2026	7/31/2026				57
-69	Phase 5: GTM	Social media content calendar	Nathan Childress	Not Started	Medium	6/26/2026	7/31/2026			Paul + Nathan
+69	Phase 5: GTM	Social media content calendar	Whitney Sanchez	Not Started	Medium	6/26/2026	7/31/2026			Paul + Nathan
 70	Phase 5: GTM	Launch campaign strategy	Paul Giarrizzo	Not Started	High	7/10/2026	7/31/2026
-71	Phase 5: GTM	Influencer outreach list (tailgate accounts)	Nathan Childress	Not Started	Medium	7/10/2026	7/31/2026
+71	Phase 5: GTM	Influencer outreach list (tailgate accounts)	Whitney Sanchez	Not Started	Medium	7/10/2026	7/31/2026
 72	Phase 5: GTM	PR / media list	Paul Giarrizzo	Not Started	Medium	7/17/2026	8/7/2026
 73	Phase 5: GTM	Pre-launch email sequence	Paul Giarrizzo	Not Started	Medium	7/31/2026	8/14/2026				64
 74	Phase 5: GTM	Waitlist goal: 1,000+ signups	Paul Giarrizzo	Not Started	High	6/26/2026	8/28/2026			Ongoing effort	64
-75	Phase 5: GTM	Teaser content on social channels	Nathan Childress	Not Started	Medium	7/10/2026	8/28/2026			Ongoing	69
+75	Phase 5: GTM	Teaser content on social channels	Whitney Sanchez	Not Started	Medium	7/10/2026	8/28/2026			Ongoing	69
 76	Phase 6: Launch	Inventory received at 3PL	Paul Giarrizzo	Not Started	High	8/7/2026	8/14/2026			Ross + Paul	53,57
 77	Phase 6: Launch	Final QC on first units	Brian Williams	Not Started	High	8/14/2026	8/18/2026				76
 78	Phase 6: Launch	Soft launch to friends/family	Paul Giarrizzo	Not Started	High	8/18/2026	8/21/2026				77
 79	Phase 6: Launch	Collect initial feedback	Paul Giarrizzo	Not Started	High	8/21/2026	8/25/2026				78
 80	Phase 6: Launch	Fix any issues identified	Brian Williams	Not Started	Medium	8/25/2026	8/28/2026				79
 81	Phase 6: Launch	Public launch announcement	Paul Giarrizzo	Not Started	High	9/1/2026	9/1/2026			TARGET LAUNCH DATE - Football Season	80
-82	Phase 6: Launch	Social media launch push	Nathan Childress	Not Started	High	9/1/2026	9/30/2026			Nathan + Paul	81
+82	Phase 6: Launch	Social media launch push	Whitney Sanchez	Not Started	High	9/1/2026	9/30/2026			Nathan + Paul	81
 83	Phase 6: Launch	Monitor orders & fulfillment	Paul Giarrizzo	Not Started	High	9/1/2026	11/30/2026			Ongoing	81
-84	Phase 6: Launch	Customer service setup	Nathan Childress	Not Started	Medium	8/18/2026	9/1/2026
+84	Phase 6: Launch	Customer service setup	Whitney Sanchez	Not Started	Medium	8/18/2026	9/1/2026
 85	Phase 6: Launch	Tailgate season marketing push	Paul Giarrizzo	Not Started	High	9/1/2026	11/30/2026			Football season	81
 86	Phase 6: Launch	Weekly sales reporting	Paul Giarrizzo	Not Started	Medium	9/1/2026	11/30/2026			Ongoing	81
 87	Phase 6: Launch	V2 feature roadmap kickoff	Brian Williams	Not Started	Low	11/1/2026	11/30/2026				81

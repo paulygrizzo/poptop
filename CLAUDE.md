@@ -90,7 +90,7 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 | Alex Munn | Co-Founder | Strategic decisions, capital | Active |
 | Ross Munn | Co-Founder | Manufacturing, suppliers | TBD (needs outreach before call) |
 | Brian Williams | Engineer | SolidWorks CAD, prototyping, 3D printing | TBD (Thursday call) |
-| Nathan Childress | Operations | Task support, social media | TBD (Thursday call) |
+| Whitney Sanchez | Operations | Task support, social media | New (Alex's sister) |
 
 ---
 

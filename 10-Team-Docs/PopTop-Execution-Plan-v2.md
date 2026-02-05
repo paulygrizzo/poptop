@@ -17,7 +17,7 @@
 | **Alex Munn** | Co-Founder / Equity | Strategic decisions, capital allocation, trademark/domain | Advisory |
 | **Ross Munn** | Co-Founder / Equity | Manufacturing sourcing, supplier relationships | Part-time |
 | **Brian Williams** | Engineer | SolidWorks CAD, prototyping, 3D printing, DFM | NPI through RTM+6mo |
-| **Nathan Childress** | Operations | Task execution, support across workstreams | As assigned |
+| **Whitney Sanchez** | Operations | Task execution, support across workstreams | As assigned |
 
 ---
 
@@ -58,7 +58,7 @@ This is the aggressive reset roadmap to take PopTop from its current state to ma
 | Alex: confirm capital for Phase 1-2 | Paul + Alex | Pending | Feb 13 |
 | Contact Ross -- update & re-engage | Paul | Pending | Feb 8 |
 | Establish recurring Thursday call | Paul | Pending | Feb 6 |
-| Set up team communication channel | Nathan / Paul | Pending | Feb 13 |
+| Set up team communication channel | Whitney / Paul | Pending | Feb 13 |
 
 ### 0.2 Project Infrastructure
 | Task | Owner | Status | Target |
@@ -75,7 +75,7 @@ This is the aggressive reset roadmap to take PopTop from its current state to ma
 | Attorney recommendation: proceed | Jeff Johnson | **COMPLETE** | Apr 28, 2025 |
 | Authorize Jeff Johnson to file trademark ($1,300) | Paul + Alex | **DECISION NEEDED** | Feb 6 call |
 | Register best available domain (drinkpoptop.com or getpoptop.com) | Alex | Pending | Feb 10 |
-| Secure social media handles (matching domain) | Nathan / Paul | Pending | Feb 17 |
+| Secure social media handles (matching domain) | Whitney / Paul | Pending | Feb 17 |
 
 #### Trademark Status Update (Feb 2026)
 > **Attorney Search (Apr 2025):** Jeff Johnson (IP Law USA) completed a federal trademark search. Found the same two potentially relevant marks:
@@ -244,7 +244,7 @@ Preliminary USPTO search (Feb 3) identified significant conflicts. See `02-Legal
 ---
 
 ## Phase 5: Go-To-Market Preparation (Jun 19 - Aug 28, 2026)
-**Owner: Paul Giarrizzo + Nathan Childress**
+**Owner: Paul Giarrizzo + Whitney Sanchez**
 **Goal: Shopify store live, marketing assets ready, pre-launch buzz building.**
 
 ### 5.1 E-Commerce Setup
@@ -260,17 +260,17 @@ Preliminary USPTO search (Feb 3) identified significant conflicts. See `02-Legal
 ### 5.2 Marketing Preparation
 | Task | Owner | Status | Target |
 |------|-------|--------|--------|
-| Social media content calendar | Paul + Nathan | Pending | Jul 31 |
+| Social media content calendar | Paul + Whitney | Pending | Jul 31 |
 | Launch campaign strategy | Paul | Pending | Jul 31 |
-| Influencer outreach list (tailgate accounts) | Nathan | Pending | Jul 31 |
+| Influencer outreach list (tailgate accounts) | Whitney | Pending | Jul 31 |
 | PR / media list | Paul | Pending | Aug 7 |
 | Pre-launch email sequence | Paul | Pending | Aug 14 |
 
 ### 5.3 Pre-Launch Buzz
 | Task | Owner | Status | Target |
 |------|-------|--------|--------|
-| Waitlist goal: 1,000+ signups | Paul + Nathan | Pending | Aug 28 |
-| Teaser content on social channels | Nathan | Pending | Jul 10 - Aug 28 |
+| Waitlist goal: 1,000+ signups | Paul + Whitney | Pending | Aug 28 |
+| Teaser content on social channels | Whitney | Pending | Jul 10 - Aug 28 |
 
 **Phase 5 Gate:** Store live (pre-launch mode), marketing assets ready, waitlist building
 
@@ -288,15 +288,15 @@ Preliminary USPTO search (Feb 3) identified significant conflicts. See `02-Legal
 | Soft launch to friends/family | Paul | Pending | Aug 21 |
 | Collect initial feedback | Paul | Pending | Aug 25 |
 | Fix any issues identified | Brian / Ross | Pending | Aug 28 |
-| Customer service setup | Nathan | Pending | Sep 1 |
+| Customer service setup | Whitney | Pending | Sep 1 |
 
 ### 6.2 Launch (Sep 1, 2026)
 | Task | Owner | Status | Target |
 |------|-------|--------|--------|
 | **PUBLIC LAUNCH** | Paul | Pending | **Sep 1, 2026** |
-| Social media launch push | Nathan + Paul | Pending | Sep 2026 |
+| Social media launch push | Whitney + Paul | Pending | Sep 2026 |
 | Monitor orders & fulfillment | Paul | Pending | Ongoing |
-| Tailgate season marketing push | Paul + Nathan | Pending | Sep - Nov 2026 |
+| Tailgate season marketing push | Paul + Whitney | Pending | Sep - Nov 2026 |
 | Weekly sales reporting | Paul | Pending | Ongoing |
 
 ### 6.3 Post-Launch (Oct - Nov 2026)
