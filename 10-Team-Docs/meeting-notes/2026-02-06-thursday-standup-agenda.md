@@ -1,8 +1,34 @@
-# PopTop Thursday Standing Call - Agenda
+## PopTop Thursday Standing Call - Agenda
 **Date:** Thursday, February 6, 2026
 **Attendees:** Paul Giarrizzo, Alex Munn, Brian Williams, Whitney Sanchez (invited)
 **Duration:** 30-45 minutes
 **Call Type:** Reboot / Realignment
+
+---
+
+## Action Items (from this call)
+
+| AR# | Owner | Action | Due | Status |
+|-----|-------|--------|-----|--------|
+| AR-001 | Whitney | Reach out for follow-up call | WW07 (Feb 10-14) | Open |
+| AR-002 | Brian | Have 1st prototype pieces ready | WW06.2 (Feb 6-7) | Open |
+| AR-003 | Brian | Drop CAD files into Engineering folder | WW06.2 | Open |
+| AR-004 | Paul | Set up recurring Thursday calendar invite | WW07 | Open |
+| AR-005 | Paul | Authorize Jeff Johnson trademark filing ($1,300) | Feb 7 | Open |
+| AR-006 | Paul | Share Google Sheets Command Center with team | Feb 7 | Open |
+| AR-007 | Alex | Confirm capital commitment for Phase 1-2 | Feb 13 | Open |
+| AR-008 | Alex | Register domain (drinkpoptop.com or getpoptop.com) | Feb 13 | Open |
+
+---
+
+## Quick Agenda Overview
+- **Welcome & Reboot** — Framing for Fall 2026 launch
+- **Team Check** — Confirm everyone's still in, same roles
+- **Engineering Status** — CAD progress, path to design freeze
+- **Timeline** — Review 7-month execution plan
+- **Trademark Decision** — Authorize $1,300 filing?
+- **Action Items** — Assign owners for next 2 weeks
+- **Logistics** — Set up recurring Wednesday calls
 
 ---
 
@@ -37,11 +63,23 @@ Go around -- each person confirms:
 **Lead: Brian**
 
 - Where do the CAD designs stand?
-  - Reference: existing STEP/STL/SolidWorks files on file
+  - Reference: existing STEP/STL/SolidWorks files on file 
+	  - Everything is in Solidworks and have STEP/STL files
   - CenterMag assembly, Can Holder, Container Top, Lid, Tube
+	  - All is designed
 - What's needed to get to a design freeze?
+	- Get thru prototype (likely multiple iterations)
+		- Springs (Vulcan Springs) - Will need to send a prototype
+		- Targeting to have pieces for 1st Prototype prior in WW06.2 - Brian
+		- Drop files into Eng. Folder - Brian
 - Dispensing mechanism design -- any progress or ideas?
+	- No concern/working on design
 - DFM considerations from what you've seen so far?
+	- May need to print some parts
+	- Considering injection molding (**16-20 wk LT** for molds, etc.)
+	- Blow molding or roto molded - for exterior
+	- Extrusion (potentially PVC/aluminum/etc)
+	- Cooling element
 - What do you need from the team to move forward?
 
 ---
@@ -51,15 +89,15 @@ Go around -- each person confirms:
 
 Present the reset execution plan targeting Fall 2026 launch:
 
-| Phase | Focus | Target |
-|-------|-------|--------|
-| Phase 0 | Reboot & Foundation | Feb 2026 (now) |
-| Phase 1 | Design & Prototyping | Feb - Apr 2026 |
-| Phase 2 | Brand Identity & IP | Feb - Apr 2026 (parallel) |
-| Phase 3 | Manufacturing & Supply Chain | Apr - Aug 2026 |
-| Phase 4 | Licensing (CLC/Fanatics) | Apr - Jul 2026 (6-12 wks post-proto) |
-| Phase 5 | Go-To-Market Prep | Jun - Aug 2026 |
-| Phase 6 | Launch & Operations | Sep 1, 2026 |
+| Phase   | Focus                        | Target                               |
+| ------- | ---------------------------- | ------------------------------------ |
+| Phase 0 | Reboot & Foundation          | Feb 2026 (now)                       |
+| Phase 1 | Design & Prototyping         | Feb - Apr 2026                       |
+| Phase 2 | Brand Identity & IP          | Feb - Apr 2026 (parallel)            |
+| Phase 3 | Manufacturing & Supply Chain | Apr - Aug 2026                       |
+| Phase 4 | Licensing (CLC/Fanatics)     | Apr - Jul 2026 (6-12 wks post-proto) |
+| Phase 5 | Go-To-Market Prep            | Jun - Aug 2026                       |
+| Phase 6 | Launch & Operations          | Sep 1, 2026                          |
 
 **Decision needed:** Does this pace work for everyone? This is aggressive.
 
@@ -113,10 +151,10 @@ Assign owners and due dates for the next 2 weeks:
 ## 7. Standing Call Logistics (2 min)
 **Lead: Paul**
 
-- **Proposal:** Move recurring call to Wednesdays starting Feb 11
+- **Proposal:** Move recurring call to Thursdays starting Feb 11
 - Confirm time slot
 - Confirm format (video call, phone, etc.)
-- Set up recurring Wednesday calendar invite
+- Set up recurring Thursday calendar invite
 - Agree on communication between calls (text group, email, etc.)
 
 ---

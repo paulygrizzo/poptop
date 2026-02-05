@@ -24,6 +24,8 @@ const CONFIG = {
     TEAM: 'Team',
     DASHBOARD: 'Dashboard',
     MEETINGS: 'Meetings',
+    ACTION_ITEMS: 'Action Items',
+    DECISIONS: 'Decisions',
     CONFIG: 'Config'
   },
 
@@ -826,6 +828,48 @@ function formatDate(date) {
   return Utilities.formatDate(date, Session.getScriptTimeZone(), 'MMM d, yyyy');
 }
 
+/**
+ * Get action items data from Action Items sheet
+ */
+function getActionItemsData(sheet) {
+  const data = sheet.getDataRange().getValues();
+  const items = [];
+
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i];
+    if (!row[0]) continue;
+
+    items.push({
+      arNum: row[0],
+      meetingDate: row[1] ? new Date(row[1]) : null,
+      owner: row[2],
+      action: row[3],
+      dueDate: row[4] ? new Date(row[4]) : null,
+      status: row[5],
+      completedDate: row[6] ? new Date(row[6]) : null,
+      notes: row[7]
+    });
+  }
+
+  return items;
+}
+
+/**
+ * Get open action items for a specific owner
+ */
+function getOpenActionItemsForOwner(ownerName) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const arSheet = ss.getSheetByName(CONFIG.SHEETS.ACTION_ITEMS);
+  if (!arSheet) return [];
+
+  const items = getActionItemsData(arSheet);
+  return items.filter(item =>
+    item.owner === ownerName &&
+    item.status !== 'Complete' &&
+    item.status !== 'Closed'
+  );
+}
+
 // ============================================
 // MANUAL FUNCTIONS (Menu Items)
 // ============================================
@@ -840,10 +884,185 @@ function onOpen() {
     .addItem('📧 Send Daily Digest Now', 'sendDailyDigest')
     .addItem('📈 Send Weekly Summary Now', 'sendWeeklySummary')
     .addItem('🔔 Check Overdue Tasks', 'checkOverdueTasks')
+    .addItem('📝 Send Meeting Notes', 'promptAndSendMeetingNotes')
+    .addItem('📋 Review Open Action Items', 'showOpenActionItems')
     .addSeparator()
     .addItem('⚙️ Setup Automation', 'setupTriggers')
     .addItem('🗑️ Remove Automation', 'removeTriggers')
     .addToUi();
+}
+
+/**
+ * Prompt user for meeting date and send notes
+ */
+function promptAndSendMeetingNotes() {
+  const ui = SpreadsheetApp.getUi();
+  const response = ui.prompt(
+    'Send Meeting Notes',
+    'Enter meeting date (YYYY-MM-DD) or leave blank for today:',
+    ui.ButtonSet.OK_CANCEL
+  );
+
+  if (response.getSelectedButton() === ui.Button.OK) {
+    const dateStr = response.getResponseText().trim();
+    const meetingDate = dateStr ? new Date(dateStr) : new Date();
+    sendMeetingNotesEmail(meetingDate);
+  }
+}
+
+/**
+ * Send meeting notes email to all team members
+ */
+function sendMeetingNotesEmail(meetingDate) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const teamSheet = ss.getSheetByName(CONFIG.SHEETS.TEAM);
+  const arSheet = ss.getSheetByName(CONFIG.SHEETS.ACTION_ITEMS);
+  const meetingsSheet = ss.getSheetByName(CONFIG.SHEETS.MEETINGS);
+
+  if (!teamSheet) {
+    SpreadsheetApp.getUi().alert('Team sheet not found!');
+    return;
+  }
+
+  const team = getTeamData(teamSheet);
+  const actionItems = arSheet ? getActionItemsData(arSheet) : [];
+
+  // Filter action items from this meeting
+  const meetingDateStr = Utilities.formatDate(meetingDate, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+  const meetingItems = actionItems.filter(item => {
+    if (!item.meetingDate) return false;
+    const itemDateStr = Utilities.formatDate(item.meetingDate, Session.getScriptTimeZone(), 'yyyy-MM-dd');
+    return itemDateStr === meetingDateStr;
+  });
+
+  const formattedDate = Utilities.formatDate(meetingDate, Session.getScriptTimeZone(), 'EEEE, MMMM d, yyyy');
+  const subject = `📝 PopTop Meeting Notes - ${formattedDate}`;
+
+  let body = `
+<div style="font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto;">
+  <div style="background: #1a365d; color: white; padding: 20px; text-align: center;">
+    <h1 style="margin: 0;">Pop<span style="color: #c9a227;">Top</span></h1>
+    <p style="margin: 5px 0 0 0;">Meeting Notes - ${formattedDate}</p>
+  </div>
+
+  <div style="padding: 20px;">
+`;
+
+  // Action Items section
+  if (meetingItems.length > 0) {
+    body += `
+    <h2 style="color: #1a365d; border-bottom: 2px solid #c9a227; padding-bottom: 10px;">
+      📋 Action Items (${meetingItems.length})
+    </h2>
+    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+      <tr style="background: #1a365d; color: white;">
+        <th style="padding: 10px; text-align: left;">AR#</th>
+        <th style="padding: 10px; text-align: left;">Owner</th>
+        <th style="padding: 10px; text-align: left;">Action</th>
+        <th style="padding: 10px; text-align: left;">Due</th>
+      </tr>
+`;
+
+    meetingItems.forEach((item, idx) => {
+      const bgColor = idx % 2 === 0 ? '#f7fafc' : '#ffffff';
+      const dueStr = item.dueDate ? Utilities.formatDate(item.dueDate, Session.getScriptTimeZone(), 'MMM d') : 'TBD';
+      body += `
+      <tr style="background: ${bgColor};">
+        <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">${item.arNum}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #e2e8f0; font-weight: bold;">${item.owner}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">${item.action}</td>
+        <td style="padding: 10px; border-bottom: 1px solid #e2e8f0;">${dueStr}</td>
+      </tr>
+`;
+    });
+    body += `</table>`;
+
+    // Summary by owner
+    const byOwner = {};
+    meetingItems.forEach(item => {
+      if (!byOwner[item.owner]) byOwner[item.owner] = [];
+      byOwner[item.owner].push(item);
+    });
+
+    body += `
+    <h3 style="color: #1a365d;">Action Items by Owner</h3>
+`;
+    Object.keys(byOwner).forEach(owner => {
+      body += `<p><strong>${owner}:</strong> ${byOwner[owner].length} item(s)</p><ul>`;
+      byOwner[owner].forEach(item => {
+        body += `<li>${item.action}</li>`;
+      });
+      body += `</ul>`;
+    });
+  } else {
+    body += `<p style="color: #718096;">No action items recorded for this meeting.</p>`;
+  }
+
+  // Footer
+  body += `
+    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; text-align: center; color: #718096;">
+      <p><a href="${ss.getUrl()}" style="color: #3182ce;">Open Command Center</a></p>
+      <p style="font-size: 12px;">PopTop Command Center • Meeting Notes</p>
+    </div>
+  </div>
+</div>
+`;
+
+  // Send to all team members
+  let sentCount = 0;
+  team.forEach(member => {
+    if (member.email && member.email.includes('@')) {
+      try {
+        MailApp.sendEmail({
+          to: member.email,
+          subject: subject,
+          htmlBody: body
+        });
+        sentCount++;
+        Logger.log(`Meeting notes sent to ${member.name} (${member.email})`);
+      } catch (e) {
+        Logger.log(`Failed to send to ${member.email}: ${e.message}`);
+      }
+    }
+  });
+
+  SpreadsheetApp.getUi().alert(`Meeting notes sent to ${sentCount} team members!`);
+}
+
+/**
+ * Show open action items summary
+ */
+function showOpenActionItems() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const arSheet = ss.getSheetByName(CONFIG.SHEETS.ACTION_ITEMS);
+
+  if (!arSheet) {
+    SpreadsheetApp.getUi().alert('Action Items sheet not found!');
+    return;
+  }
+
+  const items = getActionItemsData(arSheet);
+  const openItems = items.filter(item => item.status === 'Open');
+
+  let summary = `Open Action Items: ${openItems.length}\n\n`;
+
+  // Group by owner
+  const byOwner = {};
+  openItems.forEach(item => {
+    if (!byOwner[item.owner]) byOwner[item.owner] = [];
+    byOwner[item.owner].push(item);
+  });
+
+  Object.keys(byOwner).sort().forEach(owner => {
+    summary += `${owner}: ${byOwner[owner].length}\n`;
+    byOwner[owner].forEach(item => {
+      const dueStr = item.dueDate ? Utilities.formatDate(item.dueDate, Session.getScriptTimeZone(), 'MMM d') : 'TBD';
+      summary += `  • ${item.arNum}: ${item.action} (Due: ${dueStr})\n`;
+    });
+    summary += '\n';
+  });
+
+  SpreadsheetApp.getUi().alert('Open Action Items', summary, SpreadsheetApp.getUi().ButtonSet.OK);
 }
 
 /**
