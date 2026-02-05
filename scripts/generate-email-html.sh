@@ -33,55 +33,123 @@ echo "Processing: $DRAFT_FILE"
 
 OUTPUT_FILE="$OUTPUT_DIR/email-$MEETING_DATE.html"
 
-# Generate HTML with inline styles (Gmail-friendly)
-cat > "$OUTPUT_FILE" << 'HTMLHEAD'
-<!DOCTYPE html>
+# Use Python to convert markdown to HTML with nice styling
+python3 << PYTHON_SCRIPT
+import markdown
+from pathlib import Path
+
+# Read the markdown file
+md_content = Path("$DRAFT_FILE").read_text()
+
+# Remove the title line and metadata if present (we'll add our own header)
+lines = md_content.split('\n')
+# Skip the "# Email Draft" line if present
+if lines and lines[0].startswith('# '):
+    lines = lines[1:]
+# Skip the To/Subject lines - we'll handle those in Gmail
+content_start = 0
+for i, line in enumerate(lines):
+    if line.startswith('---'):
+        content_start = i + 1
+        break
+md_content = '\n'.join(lines[content_start:])
+
+# Convert markdown to HTML with table extension
+html_content = markdown.markdown(md_content, extensions=['tables', 'fenced_code'])
+
+# Wrap in styled HTML template
+html_template = '''<!DOCTYPE html>
 <html>
 <head>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; padding: 20px; line-height: 1.6; color: #333; }
-    h1 { color: #1a365d; font-size: 20px; border-bottom: 2px solid #c9a227; padding-bottom: 8px; margin-top: 0; }
-    h2 { color: #1a365d; font-size: 16px; margin-top: 24px; margin-bottom: 12px; }
-    table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px; }
-    th { background: #1a365d; color: white; padding: 10px; text-align: left; }
-    td { padding: 8px 10px; border-bottom: 1px solid #e2e8f0; }
-    tr:nth-child(even) { background: #f7fafc; }
-    .complete { color: #38a169; font-weight: bold; }
-    .open { color: #3182ce; }
-    ul, ol { margin: 8px 0; padding-left: 24px; }
-    li { margin: 4px 0; }
-    a { color: #3182ce; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .header { background: #1a365d; color: white; padding: 16px 20px; margin: -20px -20px 20px -20px; }
-    .header h1 { color: white; border: none; margin: 0; }
-    .header .gold { color: #c9a227; }
-    blockquote { background: #f7fafc; border-left: 4px solid #c9a227; padding: 12px 16px; margin: 16px 0; }
-    hr { border: none; border-top: 1px solid #e2e8f0; margin: 24px 0; }
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1 {
+      color: #1a365d;
+      font-size: 20px;
+      border-bottom: 2px solid #c9a227;
+      padding-bottom: 8px;
+    }
+    h2 {
+      color: #1a365d;
+      font-size: 16px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      color: #1a365d;
+      font-size: 14px;
+      margin-top: 16px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+    th {
+      background: #1a365d;
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+    td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    tr:nth-child(even) {
+      background: #f7fafc;
+    }
+    ul, ol {
+      margin: 8px 0;
+      padding-left: 24px;
+    }
+    li {
+      margin: 4px 0;
+    }
+    a {
+      color: #3182ce;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    strong {
+      color: #1a365d;
+    }
+    em {
+      color: #666;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 24px 0;
+    }
+    code {
+      background: #f7fafc;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
   </style>
 </head>
 <body>
-HTMLHEAD
-
-# Check if pandoc is available
-if command -v pandoc &> /dev/null; then
-    # Use pandoc for conversion
-    pandoc "$DRAFT_FILE" -f markdown -t html >> "$OUTPUT_FILE"
-else
-    # Simple fallback: basic markdown conversion with sed
-    echo "<p><em>Note: Install pandoc for better formatting: brew install pandoc</em></p>" >> "$OUTPUT_FILE"
-    echo "<pre style='white-space: pre-wrap; font-family: Arial;'>" >> "$OUTPUT_FILE"
-    cat "$DRAFT_FILE" >> "$OUTPUT_FILE"
-    echo "</pre>" >> "$OUTPUT_FILE"
-fi
-
-cat >> "$OUTPUT_FILE" << 'HTMLFOOT'
+''' + html_content + '''
 </body>
-</html>
-HTMLFOOT
+</html>'''
 
-echo "Generated: $OUTPUT_FILE"
+# Write the output file
+Path("$OUTPUT_FILE").write_text(html_template)
+print(f"Generated: $OUTPUT_FILE")
+PYTHON_SCRIPT
+
 echo "Opening in browser..."
-
 open "$OUTPUT_FILE"
 
 echo ""

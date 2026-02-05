@@ -62,10 +62,10 @@ case "${1:-help}" in
             echo "  fswatch: NOT INSTALLED (brew install fswatch)"
         fi
 
-        if command -v pandoc &> /dev/null; then
-            echo "  pandoc: installed"
+        if python3 -c "import markdown" 2>/dev/null; then
+            echo "  python markdown: installed"
         else
-            echo "  pandoc: NOT INSTALLED (brew install pandoc)"
+            echo "  python markdown: NOT INSTALLED (pip3 install markdown)"
         fi
         ;;
 
