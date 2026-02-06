@@ -1,7 +1,7 @@
 # PopTop Project Checkpoint
 
-**Last Updated:** February 5, 2026 (11:30 AM)
-**Session Context:** Post-call updates. Added Action Items tracking system, meeting notes email automation, AR tab for Google Sheet. Thursday call completed.
+**Last Updated:** February 5, 2026 (4:30 PM)
+**Session Context:** Automation setup complete. Apps Script deployed, triggers active, CLI tools working. Thursday call done, meeting notes sent to team.
 
 ---
 
@@ -9,117 +9,117 @@
 
 Launch PopTop (premium beverage dispenser for collegiate tailgating) before the **2026 College Football season** (target: September 1, 2026).
 
-**Immediate focus:** Execute Thursday Feb 6 reboot call, get team re-committed, authorize trademark filing ($1,300), establish Wednesday standing calls.
+**Immediate focus:** Complete automation testing (Fathom for recording, `poptop watch` for auto-commits), then focus on Brian's prototype delivery (WW06.2) and Alex's trademark authorization.
 
 ---
 
-## Completed This Session (Feb 4-5, 2026)
+## Completed This Session (Feb 5, 2026 Afternoon)
 
-### Infrastructure Setup
-- **Git initialized** -- Local repo created, initial commit with all project files
-- **GitHub repo** -- Pushed to https://github.com/paulygrizzo/poptop (private)
-- **SSH key** -- Created `~/.ssh/paulygrizzo_github` for paulygrizzo account (separate from paulgiarrizzofortis)
-- **Google Drive Desktop** -- Installed, streaming mode (files stay in cloud, don't fill local disk)
-- **Poptop folder moved to Google Drive** -- Now syncs to cloud automatically
-- **Symlink created** -- `/Users/paulgiarrizzo/Projects/poptop` → Google Drive location (both paths work)
-- **Obsidian installed** -- For viewing/editing .md files with Live Preview mode
+### Automation Infrastructure - FULLY SET UP
+- **`poptop` CLI command** -- Added alias to `.zshrc`, launcher at `scripts/poptop-tools.sh`
+- **`poptop status`** -- Shows automation health, git status, dependencies
+- **`poptop email [date]`** -- Generates beautiful HTML email from meeting notes (uses Python markdown)
+- **`poptop watch`** -- File watcher that auto-commits when you save in Obsidian
+- **fswatch installed** -- macOS file watching tool (via brew)
+- **Python markdown** -- Using instead of pandoc (simpler, already installed)
 
-### Documents Updated
-- **Execution Plan v2.1** -- Updated trademark section with Jeff Johnson's actual findings, changed standing call to Wednesdays, updated risk register
-- **PDF renamed** to `PopTop-Execution-Plan-v2.1.pdf`
-- **Thursday Agenda** -- Added Section 5 for trademark decision ($1,300), updated action items
-- **Team roster** -- Replaced Nathan Childress with Whitney Sanchez (Alex's sister) in all files
+### Apps Script - DEPLOYED & ACTIVE
+- **Web App deployed** -- URL: `https://script.google.com/macros/s/AKfycbzWD42frFfsTheIbAbJRrk6H_PB_lsyzB-M5u8jUutArE_M566xpR-qb9SC1Js08R8f/exec`
+- **PopTop menu** -- Shows in Google Sheet (Refresh Dashboard, Send Meeting Notes, Review Open ARs)
+- **Triggers set up** -- Auto-refresh on edit, daily digest (Mon/Wed 8am), overdue alerts (9am daily), weekly summary (Mon 9am)
+- **Email preferences** -- Added column F to Team tab; Ross set to "meeting-notes-only"
 
-### New Files Created
-- **`dashboard/expanded-tasks-v2.tsv`** -- 71 new detailed tasks covering:
-  - Landing page / coming soon site (8 tasks)
-  - Business formation & admin (12 tasks)
-  - ERP / QuickBooks setup (6 tasks)
-  - E-commerce / Shopify (20 tasks)
-  - Marketing / content (15 tasks)
-  - Distributor channel (8 tasks)
-  - Customer service (2 tasks)
-- **`dashboard/initial-meetings-data.tsv`** -- Meetings tab data (Feb 6 call + weekly placeholders)
-- **`dashboard/initial-decisions-data.tsv`** -- Decisions tab data (10 key decisions made to date)
+### Meeting Notes & Email
+- **Action Items table** -- Added to top of Thursday meeting agenda
+- **8 ARs extracted** -- AR-001 through AR-008 with owners, due dates, status
+- **Email sent to team** -- Used `poptop email` to generate HTML, copy/pasted to Gmail
+- **Ross added** -- MunnRoss3@gmail.com (meeting notes only)
+- **Whitney confirmed** -- whitneychristine89@gmail.com
 
-### Jeff Johnson Trademark Summary (from email thread)
-- **Apr 2025:** Professional trademark search completed
-- **Finding:** "Pop Top" (Class 21) and "Top Pop" (Class 32) found, but **neither is a showstopper**
-- **Recommendation:** Proceed with filing
-- **Cost:** $1,300 (1 class), $350/class extra if needed
-- **Status:** Jeff's firm waiting for authorization since June 18, 2025 (~8 months)
-- **Action:** Team decision needed on Feb 6 call
-
-### Completed Feb 5, 2026 (This Session)
-- **Action Items system** -- Added AR tracking to meeting notes with numbered items (AR-001, etc.)
-- **Action Items tab data** -- Created `dashboard/initial-action-items-data.tsv` for Google Sheet
-- **Apps Script updated** -- Added Action Items tab support, meeting notes email function
-- **Meeting notes updated** -- Added AR table to top, extracted 8 action items from call
-- **Email draft created** -- `10-Team-Docs/meeting-notes/2026-02-06-email-draft.md`
-- **Meeting automation docs** -- `dashboard/docs/meeting-automation-setup.md`
-- **Processing script** -- `scripts/process-meeting-notes.sh` for future automation
-- **Whitney added** -- Email: whitneychristine89@gmail.com
+### Files Created/Modified
+- `scripts/poptop-tools.sh` -- Main CLI launcher
+- `scripts/watch-meeting-notes.sh` -- File watcher for auto-commit
+- `scripts/generate-email-html.sh` -- Markdown to HTML converter
+- `scripts/process-meeting-notes.sh` -- Claude processing helper
+- `.github/workflows/sync-to-sheets.yml` -- GitHub Action (webhook disabled due to Google limitation)
+- `dashboard/apps-script/Code.gs` -- Full automation suite with email prefs support
+- `~/.zshrc` -- Added `poptop` alias and `POPTOP_DIR` env var
 
 ---
 
 ## In Progress / Paused
 
-### Paul's Pre-Call Tasks
-- [ ] Send team email with v2.1 PDF + Thursday agenda (invite already sent)
-- [ ] Copy updated Apps Script into Google Sheet and run `updateDashboard()`
-- [ ] Paste Meetings tab data into Google Sheet
-- [ ] Paste Decisions tab data into Google Sheet
-- [ ] Expanded tasks already pasted (assigned to Whitney for now)
-- [ ] Contact Ross Munn separately by Feb 8
+### To Test
+- [ ] **Fathom signup** -- fathom.video for meeting recording (free, unlimited)
+- [ ] **`poptop watch`** -- Test auto-commit when saving in Obsidian
 
-### Pending Automation (Tomorrow/Friday)
-- [ ] **Level 2: GitHub → Google Sheets auto-sync** -- Changes pushed to GitHub auto-update the Sheet
-- [ ] **Meeting recorder integration** -- Free tool to record call → transcribe → auto-update .md notes → update Sheet → email minutes to team
-- [ ] **Auto-detect saved notes** -- Trigger processing without Paul prompting "I finished notes"
-- [ ] **Apps Script Dashboard tab** -- Copy `dashboard/apps-script/Code.gs` into Google Sheet
+### Action Items from Thursday Call (Open)
+| AR# | Owner | Action | Due |
+|-----|-------|--------|-----|
+| AR-001 | Whitney | Reach out for follow-up call w/ Alex & Paul | WW06 (Feb 10-14) |
+| AR-002 | Brian | Have 1st prototype pieces ready | WW06.2 (Feb 10) |
+| AR-003 | Brian | Drop CAD files into Engineering folder | WW06.2 |
+| AR-005 | Alex | Authorize Jeff Johnson trademark filing ($1,300) | WW06.5 |
+| AR-007 | Alex | Confirm capital commitment for Phase 1-2 | Feb 13 |
+| AR-008 | Alex | Register domain (drinkpoptop.com or getpoptop.com) | Feb 13 |
+
+**Completed ARs:** AR-004 (calendar invite), AR-006 (share Command Center)
 
 ---
 
 ## Next Steps
 
-### Before Thursday Call (Feb 6)
-- [ ] Send team email with v2.1 PDF + agenda
-- [ ] Paste Meetings and Decisions data into Google Sheet
-- [ ] Run `updateDashboard()` in Google Sheet Apps Script
+### Immediate (This Week)
+1. [ ] Sign up for Fathom at fathom.video
+2. [ ] Test `poptop watch` in a terminal while editing Obsidian
+3. [ ] Follow up with Brian on prototype (due WW06.2 = Feb 10)
+4. [ ] Follow up with Alex on trademark authorization
 
-### Thursday Call (Feb 6) -- Key Decisions Needed
-1. **Team commitment** -- Is everyone still in, same roles?
-2. **Timeline** -- Fall 2026 (Sep 1) target agreed?
-3. **Capital** -- Can we fund initial phases ($4-10K near-term)?
-4. **Brian's agreement** -- Signed or path to signing?
-5. **Trademark** -- Authorize Jeff Johnson to file ($1,300)?
-6. **Standing call day** -- Move to Wednesdays starting Feb 11?
-7. **Communication** -- Group text, Slack, or Discord?
-
-### After Thursday
-- [ ] Email Jeff Johnson: "Go ahead and file" (if authorized)
-- [ ] Share Google Sheets Command Center with team (Editor access)
-- [ ] Set up Level 2 automation (GitHub → Sheets sync)
-- [ ] Set up meeting recorder workflow
-- [ ] Contact Ross Munn with update
-- [ ] Begin CLC licensing research
+### Next Thursday Call (Feb 13)
+- Review AR status
+- Brian prototype progress
+- Trademark filing status
+- Domain registration status
 
 ---
 
-## Key Decisions
+## Key Decisions (This Session)
 
 | Decision | Choice | Rationale |
 |----------|--------|-----------|
-| Project folder name | `poptop` (lowercase) | Per user preference |
-| Dashboard platform | Google Sheets + Apps Script | 100% free, collaborative, automation capable |
-| RTM target | **Sep 1, 2026 (Fall 2026)** | Before College Football season |
-| Standing call | **Wednesdays** (kickoff Thu Feb 6) | Recurring cadence for execution |
-| Trademark approach | **Jeff Johnson recommends proceeding** | Professional search found no showstoppers. $1,300 to file. |
-| Domain strategy | drinkpoptop.com or getpoptop.com | poptop.com too expensive |
-| Team change | **Whitney Sanchez replaces Nathan** | Nathan unavailable; Whitney is Alex's sister |
-| Version control | **GitHub (paulygrizzo/poptop)** | Private repo, SSH key configured |
-| File sync | **Google Drive Desktop (streaming mode)** | Cloud backup without filling local disk |
-| Markdown editor | **Obsidian** | Live Preview mode, beautiful UI |
+| Markdown converter | **Python markdown** (not pandoc) | Simpler dependency, already installed |
+| GitHub → Sheets sync | **Skip webhook, use triggers** | Google Apps Script POST redirect limitation |
+| Standing call day | **Thursdays at 12:15pm EST** | Changed from Wednesdays per team preference |
+| Ross email preference | **meeting-notes-only** | He only wants weekly meeting notes, not daily digests |
+| Email generation | **`poptop email` → HTML → copy to Gmail** | Beautiful formatting, works reliably |
+
+---
+
+## Automation Summary
+
+### Working Commands
+```bash
+poptop status              # Check automation health
+poptop email               # Generate HTML email for today
+poptop email 2026-02-06    # Generate for specific date
+poptop watch               # Start file watcher (auto-commit on save)
+```
+
+### Google Sheet Automation (Active)
+- **PopTop menu** -- Manual triggers for dashboard, emails, AR review
+- **Auto-refresh** -- Dashboard updates when any cell is edited
+- **Daily digest** -- Mon & Wed at 8am to team (except Ross)
+- **Overdue alerts** -- Daily at 9am to task owners (except Ross)
+- **Weekly summary** -- Monday at 9am to team (except Ross)
+
+### Email Recipients
+| Name | Email | Preference |
+|------|-------|------------|
+| Paul | (in Sheet) | all |
+| Alex | (in Sheet) | all |
+| Brian | (in Sheet) | all |
+| Whitney | whitneychristine89@gmail.com | all |
+| Ross | MunnRoss3@gmail.com | meeting-notes-only |
 
 ---
 
@@ -129,16 +129,17 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 |------|------|---------------|--------|
 | Paul Giarrizzo | Business Lead | Execution driver, licensing, GTM | Active |
 | Alex Munn | Co-Founder | Strategic decisions, capital | Active |
-| Ross Munn | Co-Founder | Manufacturing, suppliers | TBD (needs outreach) |
-| Brian Williams | Engineer | SolidWorks CAD, prototyping, 3D printing | TBD (Thursday call) |
-| Whitney Sanchez | Operations | Task support, social media | New (Alex's sister) |
+| Ross Munn | Co-Founder | Manufacturing, suppliers | Active (meeting notes only) |
+| Brian Williams | Engineer | SolidWorks CAD, prototyping, 3D printing | Active |
+| Whitney Sanchez | Operations | Task support, social media | Active |
 
 ---
 
 ## Key Dates
 
-- **Kickoff Call:** February 6, 2026 (Thursday) -- TOMORROW
-- **Recurring Standing Call:** Wednesdays starting February 11, 2026
+- **Thursday Call Completed:** February 6, 2026
+- **Next Standing Call:** Thursday, February 13, 2026 at 12:15pm EST
+- **Brian Prototype Due:** WW06.2 (Feb 10, 2026)
 - **Design Freeze Target:** April 24, 2026
 - **CLC Submission Target:** May 1, 2026
 - **Public Launch Target:** September 1, 2026
@@ -147,35 +148,32 @@ Launch PopTop (premium beverage dispenser for collegiate tailgating) before the 
 
 ## Relevant Files
 
+### Automation Scripts
+```
+scripts/poptop-tools.sh           <- Main CLI launcher (aliased as 'poptop')
+scripts/watch-meeting-notes.sh    <- File watcher for auto-commit
+scripts/generate-email-html.sh    <- Markdown → HTML email generator
+scripts/process-meeting-notes.sh  <- Claude processing helper
+.github/workflows/sync-to-sheets.yml  <- GitHub Action (webhook disabled)
+```
+
+### Meeting Notes
+```
+10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md  <- Call notes with ARs
+10-Team-Docs/meeting-notes/2026-02-06-email-draft.md              <- Email template
+```
+
+### Apps Script
+```
+dashboard/apps-script/Code.gs     <- Full automation (1181 lines)
+```
+**Deployed at:** https://script.google.com/macros/s/AKfycbzWD42frFfsTheIbAbJRrk6H_PB_lsyzB-M5u8jUutArE_M566xpR-qb9SC1Js08R8f/exec
+
 ### Project Location
 ```
 ACTUAL:   /Users/paulgiarrizzo/Library/CloudStorage/GoogleDrive-paul.giarrizzo@gmail.com/My Drive/poptop
-SYMLINK:  /Users/paulgiarrizzo/Projects/poptop  (points to above)
+SYMLINK:  /Users/paulgiarrizzo/Projects/poptop
 GITHUB:   https://github.com/paulygrizzo/poptop (private)
-```
-
-### Key Documents
-```
-10-Team-Docs/PopTop-Execution-Plan-v2.1.pdf                <- Share with team
-10-Team-Docs/PopTop-Execution-Plan-v2.md                   <- Source of truth
-10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md  <- Tomorrow's agenda
-01-Business-Plan/final/PopTop-Business-Plan-v1.pdf         <- For investors
-```
-
-### Dashboard Data (paste into Google Sheet)
-```
-dashboard/expanded-tasks-v2.tsv            <- 71 new tasks (ALREADY PASTED by Paul)
-dashboard/initial-meetings-data.tsv        <- Meetings tab data (NEEDS PASTE)
-dashboard/initial-decisions-data.tsv       <- Decisions tab data (NEEDS PASTE)
-dashboard/initial-action-items-data.tsv    <- Action Items tab (NEEDS PASTE - 8 ARs)
-dashboard/apps-script/Code.gs              <- Updated with AR support + email (NEEDS COPY TO SHEET)
-```
-
-### SSH Key (for GitHub pushes)
-```
-~/.ssh/paulygrizzo_github               <- Private key
-~/.ssh/paulygrizzo_github.pub           <- Public key (added to github.com/paulygrizzo)
-~/.ssh/config                           <- Has Host github-paulygrizzo entry
 ```
 
 ---
@@ -187,46 +185,23 @@ dashboard/apps-script/Code.gs              <- Updated with AR support + email (N
 **Tab Status:**
 | Tab | Status |
 |-----|--------|
-| Tasks | Populated (87 original + 71 expanded = 158 tasks) |
+| Tasks | Populated |
 | Phases | Populated |
-| Team | Whitney added (whitneychristine89@gmail.com), Nathan removed |
-| Meetings | EMPTY -- paste `initial-meetings-data.tsv` |
-| Decisions | EMPTY -- paste `initial-decisions-data.tsv` |
-| Action Items | NEW -- paste `initial-action-items-data.tsv` (8 ARs from Feb 6 call) |
+| Team | Updated (Whitney added, Email Prefs column F added) |
+| Meetings | Needs data paste |
+| Decisions | Needs data paste |
+| Action Items | Created, needs AR data paste |
 | Risks | Populated |
 | Config | Populated |
-| Dashboard | EMPTY -- run `updateDashboard()` after updating Apps Script |
-
----
-
-## Trademark Situation (READY TO FILE)
-
-**Jeff Johnson (IP Law USA)** completed professional search April 2025. Recommends proceeding.
-
-**Filing cost:** $1,300 (1 class)
-
-**Status:** Waiting for authorization since June 2025. **Decision needed Feb 6 call.**
-
-**Contacts:**
-- Jeff Johnson -- jjohnson@iplawusa.com
-- Steven Adams -- sadams@iplawusa.com
-- Firm: SOW, 18 E. University Drive, Suite 101, Mesa, AZ 85201
-
----
-
-## Pending Automation (Tomorrow/Friday)
-
-1. **GitHub → Google Sheets sync** -- Push changes, Sheet auto-updates
-2. **Meeting recorder** -- Record call → transcribe → update .md → update Sheet → email team
-3. **Auto-detect saved notes** -- No manual "I'm done" prompt needed
-4. **Obsidian + Git hooks** -- Auto-commit/push on save (optional)
+| Dashboard | Working (auto-refreshes) |
 
 ---
 
 ## Notes
 
-- Brian's Product Development & Royalty Agreement still UNSIGNED (5% royalty, $175K cap or 5-year term)
-- Ross Munn not on Thursday call -- needs separate update by Feb 8
-- Paul uses Obsidian for .md files (Live Preview mode) -- auto-saves
-- poptop folder syncs via Google Drive (streaming mode -- doesn't fill local disk)
-- Git remote uses SSH via `github-paulygrizzo` host alias
+- **GitHub webhook skipped** -- Google Apps Script can't handle POST redirects; using time-based triggers instead
+- **Pandoc not installed** -- Using Python markdown module instead (simpler)
+- **fswatch installed** -- For file watching (`poptop watch`)
+- **Shell alias active** -- `poptop` command works in new terminal windows
+- Brian's Product Development & Royalty Agreement still UNSIGNED
+- Ross added to meeting notes distribution (MunnRoss3@gmail.com)
