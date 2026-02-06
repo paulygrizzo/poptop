@@ -1,0 +1,76 @@
+*****************************************************************
+              SolidWorks Corporation - IGES Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : final
+Receiving System Product I.D.: final
+Sending File Name            : F:\My work\helmet desgine\final riddel helmet.IGS
+System I.D.                  : SolidWorks 2020
+Preprocessor Version         : SolidWorks 2020
+File Creation Date           : 201106.140047
+Model Creation Date          : 201106.140047
+Units                        : IN
+Model Space Scale            : 1.000000
+Author                       : Asus
+Organization                 : 
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:               9
+  Highest number of significant digits:                     10
+  Average number of significant digits:                6.38754
+  Maximum distance to origin:                           39.247
+  Minimum distance to origin:                                0
+  Effective number of significant digits:                   10
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+100  Arc                                            453       453
+102  Composite curve                               1280      1280
+110  Line                                           361       361
+120  Surface of revolution                           35        35
+124  Transformation matrix                          442       442
+126  Rational B-spline curve                       6060      6060
+128  Rational B-spline surface                      583       583
+142  Curve on a parametric surface                  640       640
+144  Trimmed parametric surface                     618       618
+308  Subfigure definition                             8         8
+314  Color definition                                 1         1
+408  Singular subfigure instance                     11        11
+_________________________________________________________________
+
+
+=================================================================
+Import Options
+=================================================================
+Include surface/solid entities: YES
+-Try forming solid(s): YES
+Include free point/curve entities: NO
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid Feature(s)                           8
+Surface Feature(s)                         0
+Curve/Sketch Feature(s)                    0
+--------------------------------------------
+Start Time: Thursday, April 24, 2025 09:55:08
+Finish Time: Thursday, April 24, 2025 09:55:38
+Total Processing Time: 0 days, 00 hours, 00 mins, 30 secs

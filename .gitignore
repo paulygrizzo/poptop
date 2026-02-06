@@ -34,3 +34,11 @@ secrets.json
 *.tmp
 *.temp
 ~$*
+
+# Large CAD files (exceed GitHub 100MB limit)
+# These should be shared via Google Drive instead
+03-Product-Engineering/cad-files/Football Helmet Files/Face Guard.3mf
+03-Product-Engineering/cad-files/Football Helmet Files/Helmet Print Parts/Helmet Small Parts.3mf
+03-Product-Engineering/cad-files/Football Helmet Files/OBS 4-26-25/obj_1_Blank Football Helmet3 Main.SLDPRT
+03-Product-Engineering/cad-files/Football Helmet Files/OBS 4-26-25/obj_1_Blank Football Helmet3 Main.stl
+03-Product-Engineering/cad-files/Football Helmet Files/OBS 4-26-25/obj_2_Blank Football Helmet2.SLDPRT

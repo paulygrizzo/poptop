@@ -200,17 +200,21 @@
   },
   "active": "0e95df202233237a",
   "lastOpenFiles": [
-    "scripts/poptop-tools.sh",
-    "scripts/generate-email-html.sh",
-    "scripts/watch-meeting-notes.sh",
+    "03-Product-Engineering/cad-files/Pop Top Assy.SLDASM",
+    "03-Product-Engineering/cad-files/Can.SLDPRT",
+    "03-Product-Engineering/cad-files/PopTop_CenterMag.SLDPRT",
+    "03-Product-Engineering/cad-files/92390A184_18-8 Stainless Steel Clevis Pin.SLDPRT",
+    "03-Product-Engineering/cad-files/92390A184_18-8 Stainless Steel Clevis Pin.STEP",
+    "03-Product-Engineering/cad-files/Base.SLDPRT",
+    "03-Product-Engineering/cad-files/poptop can holder.SLDPRT",
+    "03-Product-Engineering/cad-files/poptop pusher.SLDPRT",
+    "03-Product-Engineering/cad-files/Spout.SLDPRT",
+    "03-Product-Engineering/cad-files/Spring.SLDPRT",
+    "03-Product-Engineering/cad-files/Cooler.SLDPRT",
     "10-Team-Docs/meeting-notes/2026-02-06-thursday-standup-agenda.md",
-    "scripts/process-meeting-notes.sh",
-    "scripts",
     "dashboard/docs/meeting-automation-setup.md",
     "10-Team-Docs/meeting-notes/2026-02-06-email-draft.md",
-    "dashboard/initial-action-items-data.tsv",
     "02-Legal-IP/trademark-domain-research-2025-02-03.md",
-    "Pop Top Tracker.gsheet",
     "10-Team-Docs/meeting-notes/2025-02-05-wednesday-standup-agenda.md"
   ]
 }
